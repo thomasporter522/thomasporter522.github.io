@@ -1,0 +1,39 @@
+<!-- wp:paragraph -->
+<p>There is an amazing pervasiveness of objects and arrows in our formal descriptions of reality, particularly when the arrows are acyclic. This post is essentially my attempt at getting my head around this amazing unity. I start with a list of related concepts that I composed after thinking about the Wolfram Model, which I find very compelling.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>Categories: the most famous and obvious domain of objects and arrows, generalizing sets and functions.<ul><li>Can be used to represent structures (Lawvere theories and sketches)</li><li>Can be used to represent logic, both by modeling logical structures and logical derivations about structures</li><li>Resemble the encoding of accessibility and modalities, à la Kripke frames</li><li>Resemble causal diagrams, à la Judea Pearl's causal calculus</li><li>Resemble causality in physics, à la causal set theory and the Wolfram Model</li></ul></li><li>Causality: a central feature in physics, and (in my opinion) the largest philosophical obstacle to thinking of reality as a bare mathematical structure<ul><li>Recovers normal modal logic when used with Kripke frames</li><li>Essentially produces time, which produces our intuition of mappings, logical derivations, and computations</li></ul></li><li>Possible worlds<ul><li>Logically modeled with Kripke semantics</li></ul><ul><li>(Meta-)physically manifested, as Max Tegmark classifies, as<ul><li>Possible mathematical structures of the universe</li><li>Possible fundamental constants</li><li>Possible initial conditions</li><li>Quantum branches</li></ul></li><li>(Meta-)physically manifested, in the Wolfram Model, as<ul><li>Possible rules, or foliations of rule space</li><li>Possible initial conditions</li><li>Quantum branches</li><li>Perhaps foliations of the multiway causal graph?</li></ul></li></ul></li><li>Q<span style="font-family:var(--font-base, &quot;PT Sans&quot;, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, &quot;Roboto&quot;, &quot;Oxygen&quot;, &quot;Ubuntu&quot;, &quot;Cantarell&quot;, &quot;Fira Sans&quot;, &quot;Droid Sans&quot;, &quot;Helvetica Neue&quot;, sans-serif);">uantum branches</span><ul><li>Correspond to different causal chains from the same initial configuration</li><li>Correspond to different derivations from the same premises?</li></ul></li><li>Structures<ul><li>Composed of structureless objects and relations or mappings between them</li><li>Thought of as objects, and mappings exist between them</li><li>Statements about the structure are thought of as objects, with derivations as mappings between the statements</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>Wowza! I find that the items on this list are shockingly interrelated on many different levels, and I think many interesting things may be observed from this.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The fist observation is that structures are objects, given structure by mappings between others. But this is an abstraction of structures as collections of lower level objects, formalized by mappings among them. Most strikingly, statements about structures are objects, and they are given by axioms and derivations, which themselves are given by the mappings defined on the structure to begin with. In other words, statements about the structure are mapped in accordance with the maps that define the structure itself.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The principal observation is that we apparently can only formalize objects using lower level objects. From the model theory perspective on the foundations of mathematics, every thing is a set of little things called elements. These elements are, by themselves, essentially meaningless, and seem to barely deserve the name of "thing." The categorical approach is primarily about abstracting away elements, so that the only things present are the actual objects we care about. This is achieved by letting mappings take care of all the structure. A special power of category theory is that higher categories allow us to think of the mappings, or the collections of objects, as themselves objects.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Even before the experimental confirmation of atoms, the ancient Greeks suspected tiny objects out of which every object is made. It turns out that they were right, and it also turns out that atoms are made out of smaller particles. Even when particles behave like quantum fields, we treat excitations as objects, the fields as objects, and the fields as structures made out of objects. This pervasiveness seems remarkable to me, and I see the following possible explanations:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>The concept of "object" is so inherently applicable as to appear everywhere</li><li>The fact that the universe is made of objects give rise to high level objects</li><li>The presence of high level patterns in the universe that we classify as objects has molded our cognition to inevitably think in terms of objects</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>I admit that these options and the issue itself are not very clear cut.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The same thing applies to arrows, but these are considerably more interesting and complicated. I am certainly of the opinion that the cognitive reality of mathematics is undervalued, and that people are far too mystical and romantic about the existence of some Platonic realm of math. I think that it is a simple, pragmatic, cognitive reality that we think in terms of objects (as a memory and computation saving compression) and in terms of mappings (under the guises of properties, relationships, and derivation). I think that time and causality on a high, emergent physical level is where our intuition about mappings and derivations comes from. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In conclusion, I wonder if the role of objects and mappings as pragmatically optimized cognitive heuristics is why our physical and mathematical (indeed, formal) theories all revolve around them. But especially in the case of derivations/mappings/computation, its presence on a fundamental level appears to give rise to its high level presence anyway. I think only a thorough understanding of physical reality could answer this chicken and egg question.</p>
+<!-- /wp:paragraph -->

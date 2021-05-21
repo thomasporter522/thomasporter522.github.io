@@ -1,0 +1,35 @@
+<!-- wp:paragraph -->
+<p>For whatever reason, I felt that the classification of functions by the number of images and preimages of elements deserved further examination. The classification I speak of includes the denominations injective, surjective, bijective, total/partial, and single-/multi-valued. Most people who are familiar with these classifications already know that only bijections are invertible as functions, with the corollary that the inverse of a bijection is bijective. But a quick consideration of the definitions of injective and surjective leads one to the (probably useless) observation that the inverse of an injection would be a "single-valued" mapping, and that the inverse of a surjection would be a "total" mapping (if here we allow mappings to include relations that are not single-valued or not total).</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This silly observation made me unhappy with the nomenclature, mainly because the denominations 'surjective' and 'injective' forbid certain behavior, while those of 'partial' and 'multivalued' allow certain behavior. Moreover, 'partial' and 'multivalued' have less common negatives, while there are no standard terms (as far as I know) for failing to be surjective or injective. I am well aware of how ubiquitous the desire to change mathematical terminology or notation is, so consider this a trifle for your amusement rather than a serious proposition. Here is my new, pointless taxonomy.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>To each relation between X and Y can be associated two subsets of {0,1,+}, one for X and one for Y. The X-set corresponds to the set of numbers of Y elements related to each X element (I know this sentence is practically unreadable). For example, if each element of X is related to exactly one Y, the X-set would be {1}. In the case of the empty relation, the X-set is {0}. If the relation represents a partial function, the X-set would be {0,1}. If it represents a multivalued function that is multivalued everywhere, the X-set would be {+}. If some Xs are related to no Ys, some to one Y, and some to multiple Ys, the X-set would be {0,1,+}, etc. The definition of the Y-set is symmetrical. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>If you have a relation with a specified first set X and a second set Y, here are my rules for naming the type of map it represents:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>If 0 is in the X-set, it's "semivalued" (the negative is "survalued")</li><li>If + is in the X-set, it's "multivalued" (the negative is "invalued")<ul><li>If 1 is also in the X-set, it's "partially multivalued"</li><li>If 1 is not, then it's "totally multivalued"</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li>If 0 is in the Y-set, it's "semijective" (the negative is "surjective")</li><li>If + is in the Y-set, it's "multijective" (the negative is "injective")<ul><li>If 1 is also in the Y-set, it's "partially multijective"</li><li>If 1 is not, then it's "totally multijective"</li></ul></li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>For the sake of completeness, I specify that a map should be labelled with any applicable modifiers, in the order listed above, with:</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>"survalued, invalued" or "surjective, injective" replaced with "bijective"</li><li>The last modifier made into a noun ("partially _-valued" -&gt; "partial _-valuation")</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>What do you think of this terminology?</p>
+<!-- /wp:paragraph -->

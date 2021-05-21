@@ -1,0 +1,79 @@
+<!-- wp:paragraph -->
+<p>The concepts of abstraction, formalism, and symbolism permeate computer science, philosophy, and ideas about linguistics, cognition, and physics. They are also very related in meaning, even to the point of synonymy in some contexts, yet are rather difficult to define. Here I will discuss my ideas about what each means, how they connect, and how they are distinct. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Abstraction</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>Abstraction is sometimes defined as simplification or generalization. In computer science, abstraction is the removal of the details of a process or system, and the preservation of the actual functionality of the process or system. It is rather like drawing a box around a diagram, so that the box can be used as a basic component in future diagrams. This is useful for efficiency of design, so that a complicated system can be expressed as a chain of relatively simple systems defined in terms of each other. It is also useful for abstracting "implementation details" so that the same system can be implemented in different environments. This gives a compositionality and universality to technological designs.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>In mathematics, one might define such a process as a 'mapping that preserves (some) structure, but not all information.' Abstraction is a mapping, since it associates systems with abstract representations. It preserves some structure, since some relevant features of the system remain with the representation. It does not preserve all information, since its purpose is to simplify, and forget some details about the system. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Another mathematical way of defining abstraction is the imposition of an equivalence relation on a set of systems. In other words, various systems that are different (in their details) are considered equivalent in some sense (if they have the same "abstracted features"). The neat thing is that these two mathematical interpretations of abstraction are mathematically correspondent; any structure preserving map from a set or structure induces an equivalence relation on that set or structure, defined by "a is equivalent to b if f(a) = f(b)," and the case of information loss (some details are forgotten) corresponds to the case when the equivalence relation is nontrivial (different from just equality). </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>So an abstraction is a simplification, a mapping that preserves some desired structure while forgetting some undesired structure. It is useful for building stacks of technology in a way that is understandable to humans, by allowing designers to express systems in terms of smaller systems, instead of atomic components (we don't have to write all programs in machine code). It also increases efficiency, since it allows us to reuse systems that have already been defined (we don't need to make custom circuits for each computation). In mathematics, abstraction (or quotienting) is used to isolate or define structures that would be hard to define otherwise. In fact, "definition through abstraction" is used in the foundation of math, all the way from defining the integers in terms of the naturals to defining homotopy classes. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Abstraction is also at the heart of language, both natural and programming, and at the heart of theory, both scientific and mathematical. This correspondence is very exciting to me, and I may make another blog post about just this. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Formalism and Symbolism</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>It took me a very long time to understand how the different definitions of "formal" are related. In human society, it means official, or obeying specific procedures. It can also mean rigorous or symbolic, when referring to a proof or reasoning.  But etymologically it just means "relating to form," so what do those two meanings have to do with shape? </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The answer occurred to me when I thought about formal sums in math. A formal sum is a sum between objects which may not necessarily be summable in a traditional sense. For example, I could formally sum a giraffe with a zebra to get "giraffe + zebra." What is giraffe + zebra? Well, the answer is that it is just "giraffe + zebra." It doesn't simplify to anything, but it still exists. It can only simplify according to general properties of the + operation. For example, I know that giraffe + zebra = zebra + giraffe, and that giraffe + zebra - giraffe = zebra. The formal application of operations makes sense for any operation, and has interesting properties if any rules about the operation are defined (such as commutativity). My post on <a href="https://thomasjporter.wordpress.com/2020/05/24/morphic-programming/">morphic programming</a> is largely based on the interpretation of type constructors as formally applied functions. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I think that formalism is the correspondence between a system and a syntactic system, meaning a system composed of inherently meaningless elements (symbols) with manipulation rules. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>This extracts some desired properties of the original system, or perhaps all properties, into a system, the only meaning of which is syntactic or structural. This syntax and structure reflects the "shape/form" notion from the etymology. For example, a formal definition of "and" is that "A and B" is exactly that which can be derived from "A" and "B", and from which "A" can be derived and "B" can be derived. This is a syntactic system that does not remark on the meaning of "and" except through specifying the shape of the logical arguments that can be made with it. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>So formalism is often a case of abstraction, in which dynamic or structural information about a meaningful system is captured in the structure of a system or inherently meaningless elements. This intrinsic meaninglessness is exactly the heart of symbolism. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2>Connection</h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p>So, to what degree are all of these words synonyms? I have indicated above that formalism is a type of abstraction, and that formalism involves symbolism. In fact, I may go so far as to say that formalism is the intersection of abstraction and symbolism, since my definition for formalism involves a simplifying map, and has the requirement of meaningless symbols. But symbolism can exist without abstraction, since arbitrary signals can have reference without representation. For example, a person's name is a symbol for them, but nothing much about it or its syntactic behavior indicates anything about the person. Conversely, a pictogram can be an abstraction of a real class of objects, but is a compressed encoding of real features so is not symbolic by the definition used here. Though in a more general sense, a symbol can just mean a unit of signal. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Natural language is a huge mishmash of these concepts. Most of our language signals are inherently meaningless, and gain some meaning through their relationship with each other (as in word vectors), and some meaning from the situation in which they are used. So language is largely symbolic, and partially formal. Language is also a central domain for abstraction, and I think that every word's <em>meaning</em> is an abstraction. The word itself is a symbol that has no structure on its own (a symbol), but it encodes a cognitive meaning that is a useful, structured generalization of phenomena (an abstraction). Syntax and other linguistic structure that allows the composition of words is an instance of formalization, as it conveys meaningful structure of ideas through the coarse shapes of symbols. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>There is an interesting connection to machine learning here. An autoencoder is a type of neural network that is trained to simply output its inputs. The catch is that the interior of the network is narrower than the beginning and end, so its forced to compress the information about its input, and ends up coming up with efficient representations of the type of data it receives. This can be used to reduce the dimensionality of the data, and find patterns. In other words, it is an abstraction machine. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>The problem is that if you give it too many layers, and let it get too complex, it will not choose representations that reflect anything about the data. It's as if instead of copying a picture into simpler version of itself, the encoder just started writing bar codes for each picture. It can technically convey all the information, but it has lost its structure. In other words, it has produced symbolism. This tends to overfit the data, and ruins the model. </p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>I find it interesting that naive, or computationally efficient signals are abstracted representations, and that greater computing power naturally produces systems that utilize symbolism, which is more efficient for space. It reminds me of the evolution of many writing systems from pictographic to syllabic or alphabetic. It also makes me wonder how much of our thinking is syntactic rather than semantic, and if we risk losing generality of thought by relying on symbols.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Thank you for reading! I would be interested to know any thoughts you have about this topic.</p>
+<!-- /wp:paragraph -->
