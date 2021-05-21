@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./../../style.css">
+</head>
+<body>
+<div class="blogpost">
+    <h1>Morphic Programming</h1>
+    <h3>Thomas Porter, May 24, 2020</h3>
+    <p>I'm far from up to date on the current theory of programming languages, but an alternative programming paradigm occurred to me when learning functional programming last year. It is essentially a simplification of functional programming in an effort to increase theoretical beauty, a goal already aligned with the philosophy of functional programming. The simplification takes inspiration from category theory and the Wolfram Language. </p>
+
+    <p>The main idea is to generalize type constructors and functions into the same object, a morphism (in the categorical sense). In standard functional languages (at least Haskell and OCaml), type constructors can be applied to one type to create an value of another type, but are only applied 'formally' or 'symbolically,' meaning that the resulting value has no form other than 'constructor(argument).' Functions also can be applied to values of a certain type, but must be endowed with semantics such that the resulting value is not of the form 'function(argument).' In other words, in these traditional functional programming languages, type constructors are morphisms that are without semantics or simplification rules, while functions are morphisms that must always have such things. </p>
+
+    <p>Enter the Wolfram Language. Steven Wolfram is very proud of the simple, unified, symbolic nature of the underlying system to the language, as well he should be. Functions in the Wolfram language are applied formally, and simplified in certain cases according to their semantics. This means that values and expressions look the same, both being the composition of functions. I find this system extremely elegant. But the Wolfram Language does not yet (I believe) include user defined types, nor even user defined functions that are allowed to behave in this 'conditionally applicative' manner! The Wolfram Language also diverges from the traditional functional programming languages by distinguishing between operations and functions, and by not emphasizing currying or higher order functions. The language instead has an immense library of basic data structures and functions that practically eliminate the need for users to define their own, except as simple compositions of the powerful built-in functions. </p>
+
+    <p>With the Wolfram idea, which I will call conditional application, traditional functional programming would be drastically simplified. Here is my image for what a program would consist of:</p>
+
+    <ul><li>A set of names of types</li><li>A set of morphisms, each with a source and target type</li><li>A set of commutative diagrams that allow an expressions to be simplified</li></ul>
+
+    <p>An expression would simply be a composition (or product, coproduct, etc) of expressions or morphisms. The compiler would have to understand how to work in a category, and with products, coproducts, and exponential objects. The commutative diagrams would have to have a directionality, and be acyclic, in order for there to be a consistent direction of simplification. Perhaps a further condition on the commutative diagrams would need to be required of the programmer, or imposed by the compiler, in order for the connected components of the hom-sets to actually have minima (these corresponding to the normal form of an expression). </p>
+
+    <p>This picture is essentially of nothing more unique than some kind of finitely generated category. This suggests that we might want the language to include higher order notions, certainly including endofunctors, and possibly more elaborate tricks. </p>
+
+    <p>The hope is that this very high level way to interact with a computer would be highly extensible and general, a version of functional programming that is less restrictive, but in which encoding the usual functions and type constructors is essentially as easy.</p>
+
+    <p>I have a confession to make: there is a massive problem with this scheme. It removes the programming form programming. There is no way to specify implementation, except by totally tricking and abusing the system. If we want to represent the naturals using the Peano encoding, storing an number would be linear in space. Addition would be linear in time. And it only gets worse form there. </p>
+
+    <p>The truth is that this paradigm could only work if design and implementation are decoupled, as we are a long way from. The real technology that this project would require is <em>automatic implementation</em> of high level behavior. An optimizing compiler would deduce the fact that naturals should be stored using a binary number system. </p>
+
+    <p>At this point, these ideas are a daydream. Current programming languages are compromises, no doubt very good ones, between implementation and abstraction. But I am looking ahead to what the the most elegant way to fundamentally specify a functional program might be, and I think this optimum is closer to something like morphic programming. </p>
+</div>
+</body>
+</html>
