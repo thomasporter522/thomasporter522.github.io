@@ -1,0 +1,13 @@
+
+.grid-container {
+    display: grid;
+    background-color: black;
+    grid-template-columns: auto auto auto;
+    padding: 10px;
+}
+.grid-item {
+    /* border: 1px solid rgba(0, 0, 0, 1); */
+    background-color: rgba(150, 150, 200, 1);
+    padding: 20px;
+    text-align: center;
+}
