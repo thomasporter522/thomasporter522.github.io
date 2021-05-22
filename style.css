@@ -4,6 +4,9 @@ body {
     margin-right: auto;
     width: 70em;
 }
+ul {
+    text-align: left;
+}
 .grid-container {
     display: grid;
     background-color: black;
