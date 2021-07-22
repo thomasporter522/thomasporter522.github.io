@@ -14,9 +14,15 @@
         <li>Observation 2: Sunlight contains a relatively even spread of wavelengths. </li>
         <li>Observation 3: It seems like a lot of what we see has either extra intensity or extra deficiency in one specific wavelength. This is the most arguable observation, and is quite a generalization, but I think it leads to an interesting conclusion.</li>
     </ul>
-    <p>The conclusion is that most light profiles we see look something like this:</p>
+    <p>The conclusion is that most light intensity profiles we see look something like this:</p>
     <img src="./images/wavelengths.jpg" width=auto>
     <p>With some intensity of background light (b), and an anomaly of some intensity (c) at some wavelength (a). This is three dimensions, so three cones are needed in order to percieve all combinations of these parameters as different, and additional cones only provide information about deviations from this family of profiles.</p>
+    <p>And that's really the whole argument. But let's unpack it a bit.</p>
+    <p>The value (a), or perhaps some weighted average of (a) and (b) depending on how broad our anomaly is, corresponds to the dimension of lightness. We also have rods, which only detect lightness, but they seem to me to be generally redundant with the combination of cones.</p>
+    <p>The value |(a)-(b)| represents the difference between the background light and the anomaly, or how far the anomaly is from gray (a simple uniform intensity). This is saturation.</p>
+    <p>The values of lightness and saturation have interpretations for any number of cones: lightness is the sum of cone intensities, and saturation is some kind of variance (I think usually the maximum difference) between the various cone intensities. "Hue" refers to all remaining degrees of freedom, and has dimension equal to the number of cones minus 2 (for lightness and saturation).</p>
+    <p>Geometrically, we may view the space of cone activations as an n-dimensional cube - one axis per cone, ranging from no activation to max activation. Lightness is distance along the diagonal from the black corner (all cones have no activation) to the white corner (all max). Saturation is distance from this diagonal. Hue is what remains. In the case of three cones, the final degree of freedom is circular, representing the angle around the diagonal. For more cones, hue space will always be spherical (of some dimension). It can also be viewed as a simplex, with the vertices as the primary colors of light.</p>
+    <p>The color wheel is our hue space, and the spectrum of wavelengths can be mapped nicely onto it. That is another way of phrasing our conclusion about why three cones is special - because our hue space is the same dimension as wavelength space. With four cones, hue space would be a sphere, and any mapping of the spectrum onto that sphere will waste space. Of course, it's better for more complex light intensity profiles.</p>
 </div>
 </body>
 </html>
