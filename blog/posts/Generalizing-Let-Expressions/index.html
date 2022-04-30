@@ -8,7 +8,60 @@
     <h1>Generalizing Let Expressions</h1>
     <h3>Thomas Porter, April 30, 2022</h3>
 
-    <p>Let!</p>
+    <p>The lambda calculus consists of two basic operations; function abstraction and function application. 
+        I prefer to write function abstraction using a simple arrow notation. My notation is on the left, and the traditional notation is on the right.</p>
+
+    <img src="./images/fig1.png" width=50%>
+
+    <p>And I prefer to write function application using the pipeline operator, represented as a little triangle. </p>
+
+    <img src="./images/fig2.png" width=50%>
+
+    <p>The semantics of the let expression, ubiquitous in functional programming, may be simply expressed as:</p>
+
+    <img src="./images/fig3.png" width=70%>
+
+    <p>That is, within the body of the let expression (here E[x]), the symbol x evaluates to e. We may also understand the semantics as:</p>
+
+    <img src="./images/fig4.png" width=80%>
+
+    <p>Which will elucidate the generalizations. When programming, I have been finding myself writing expressions of the form: </p>
+
+    <img src="./images/fig5.png" width=40%>
+
+    <p>Where E may be rather complicated, and in fact may contain nested expressions of the form above. Map and bind are ubiquitous operators which, like application, take as arguments a value, and a funtion, and perform some kind of alternative to direct function application. Maps are associated with all functors, and bind is associated with monads, which represent a special kind of functor.</p>
+
+    <p>But defining my own function for such a narrow use felt pretty clunky. 
+        I realized that let expressions solve exactly this problem, but for the application operator, rather than map or bind. 
+        Let expressions allow you to implicitly chain together function abstractions, which are immediately applied to some argument. 
+        This suggests the following constructs. </p>
+
+    <img src="./images/fig6.png" width=90%>
+
+    <p>I found the Jane Street indeed has an <a href = "https://github.com/janestreet/ppx_let">implementation</a> of this kind of thing, 
+        and adjacent constructs. These feel nice, but all told, not too remarkable. The thing that really pleases me is a notation I'd like 
+        to adopt for these constructs. First, I'd like a notation for map and bind that suggests their ubiquity and analogy with 
+        plain function application.</p>
+        
+    <img src="./images/fig7.png" width=50%>
+
+
+    <p>A notation I like for let expressions is the backwards arrow for assignment... and let expressions are for application...
+        and arrows can be made to incorporate the little triangle ... which leads me to this: </p>
+
+    <img src="./images/fig8.png" width=90%>
+
+    <p>How does this notation look in practice? Here are two simple examples.</p>
+
+    <p>Inreasing every element of a list by two. Assume l is a list of numbers.</p>
+    
+    <img src="./images/fig9.png" width=40%>
+    
+    <p>Perform an operation on two options/maybes if both succeed. Assume e1 and e2 are both options/maybes of some type T, and that f takes in a pair of Ts. </p>
+    
+    <img src="./images/fig10.png" width=70%>
+
+    <p>This seems pretty reasonable to me! What do you think?</p>
 </div>
 </body>
 </html>
