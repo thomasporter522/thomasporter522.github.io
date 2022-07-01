@@ -1,19 +1,30 @@
 import json
 
+def process_project(project):
+    item = "<p class=\"project\">"+ project["name"] +" <a href = \"" + project["link"] + "\">[link]</a></p>"
+    if "at" in project.keys():
+        item += "<span class=\"with\">"+project["at"]+"</span>"
+    if "description" in project.keys():
+        description = "<div class = \"expdescription\" class=\"content\" style=\"display:none;\"><p>" + project["description"] + "</p></div>"
+        item = "<div class=\"collapsible\">" + item + "</div>" + description
+    return item
+
 def process_experience(experience):
     item = "<p class=\"experience\">" + experience["name"] + "</p>"
     if "with" in experience.keys():
         item += "<span class=\"with\">" + experience["with"] + "</span> <br>"
     item += "<span class=\"date\">" + experience["date"] + "</span>"
     if "description" in experience.keys():
-        description = "<div class=\"content\" style=\"display:none;\"><p>" + experience["description"] + "</p></div>"
+        description = "<div class = \"expdescription\" class=\"content\" style=\"display:none;\"><p>" + experience["description"] + "</p></div>"
         item = "<div class=\"collapsible\">" + item + "</div>" + description
     return item
 
 def process_class(clas):
     subject_codes = {"cs" : "CS", "math" : "Math", "linguistics" : "Ling"}
     item = "<li class=\"collapsible\">" + subject_codes[clas["subject"]] + " " + str(clas["number"]) + ": " + clas["name"] + "</li>"
-    description = "<div class=\"description\" class=\"content\" style=\"display:none;\"><p>" + clas["description"] + "</p></div>"
+    skills = ""
+    if len(clas["skills"]) > 0: skills = "<p class=\"skill\">" + ", ".join(clas["skills"]) + "</p>"
+    description = "<div class=\"description\" class=\"content\" style=\"display:none;\"><p>" + clas["description"] + "</p>"+ skills + "</div>"
     return item + description
 
 def get_classes(classes):
@@ -45,6 +56,11 @@ def generate(maintemplate, maindest, blogtemplate, blogdest):
     f = open("data/blog.html", "r")
     blog = f.read()
     result = result.replace("#blog", blog)
+    f.close()
+
+    f = open("data/projects.json")
+    projects = json.load(f)
+    result = result.replace("#projects", "".join([process_project(project) for project in projects]))
     f.close()
 
     f = open("data/classes.json")
