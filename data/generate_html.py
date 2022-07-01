@@ -1,9 +1,19 @@
 import json
 
+def process_experience(experience):
+    item = "<p class=\"experience\">" + experience["name"] + "</p>"
+    if "with" in experience.keys():
+        item += "<span class=\"with\">" + experience["with"] + "</span> <br>"
+    item += "<span class=\"date\">" + experience["date"] + "</span>"
+    if "description" in experience.keys():
+        description = "<div class=\"content\" style=\"display:none;\"><p>" + experience["description"] + "</p></div>"
+        item = "<div class=\"collapsible\">" + item + "</div>" + description
+    return item
+
 def process_class(clas):
     subject_codes = {"cs" : "CS", "math" : "Math", "linguistics" : "Ling"}
     item = "<li class=\"collapsible\">" + subject_codes[clas["subject"]] + " " + str(clas["number"]) + ": " + clas["name"] + "</li>"
-    description = "<div class=\"content\" style=\"display:none;\"><p>" + clas["description"] + "</p></div>"
+    description = "<div class=\"description\" class=\"content\" style=\"display:none;\"><p>" + clas["description"] + "</p></div>"
     return item + description
 
 def get_classes(classes):
@@ -27,9 +37,11 @@ def generate(maintemplate, maindest, blogtemplate, blogdest):
     result = result.replace("#blurb", f.read())
     f.close()
 
+    f = open("data/experience.json")
+    experiences = json.load(f)
+    result = result.replace("#experience", "".join([process_experience(experience) for experience in experiences]))
+    f.close()
     
-    
-
     f = open("data/blog.html", "r")
     blog = f.read()
     result = result.replace("#blog", blog)
@@ -62,4 +74,4 @@ def generate(maintemplate, maindest, blogtemplate, blogdest):
     f.close()
 
 if __name__ == "__main__":
-    generate("data/index_template.html", "idex.html", "data/blog_template.html", "blog/index.html")
+    generate("data/index_template.html", "index.html", "data/blog_template.html", "blog/index.html")

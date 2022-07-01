@@ -1,15 +1,15 @@
 [
     {
         "tags" : ["research", "work"],
-        "name" : "Probabilistic Dependency Graphs Divergence Research",
+        "name" : "PDG Divergence Research",
         "with" : "Oliver Richardson, Joseph Halpern",
         "date" : "Jun 2022 - Present",
-        "description" : "Explored alternative defintions of PDG inconsistency using different statistical divergences.",
+        "description" : "Explored alternative defintions of Probabilistic Dependency Graph inconsistency using different statistical divergences.",
         "results" : []
     },
     {
         "tags" : ["research"],
-        "name" : "POWER-Seeking in POMDPs Research",
+        "name" : "AI POWER-Seeking Research",
         "with" : "AI Safety Camp, Alex Turner",
         "date" : "Jan 2022 - Present",
         "description" : "Worked to generalize the original POWER-Seeking Theorem to partially observable environments.",
@@ -25,7 +25,7 @@
     },
     {
         "tags" : ["research", "work"],
-        "name" : "Template Filling Information Extraction Research",
+        "name" : "Information Extraction Research",
         "with" : "CSURP Program, Claire Cardie",
         "date" : "Jun 2021 - Aug 2021",
         "description" : "Analyzed frequency of different error types for document-level template filling models.",

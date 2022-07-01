@@ -2,11 +2,16 @@ body {
     background-color: rgba(100, 100, 100, 1);
     margin-left: auto;
     margin-right: auto;
-    font-family: Georgia;
+    font-family: 'Arial';
     width: 70em;
 }
 ul {
     text-align: left;
+}
+.classes {
+    list-style: none;
+    font-size: 90%;
+    padding: 0px 0px;
 }
 .grid-container {
     display: grid;
@@ -19,4 +24,19 @@ ul {
     background-color: rgb(200, 200, 200);
     padding: 20px 20px;
     text-align: center;
+}
+.experience {
+    font-weight: bold;
+    margin-bottom:0px;
+    font-size: 110%;
+    /* text-align: left; */
+}
+.date {
+    margin-top:0px;
+    display: inline;
+    color: rgb(100, 100, 100); 
+}
+.description {
+    /* font-size: 90%; */
+    color: rgb(100, 100, 100); 
 }

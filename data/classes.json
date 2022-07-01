@@ -114,7 +114,7 @@
     {
         "subject" : "math",
         "number" : 4200,
-        "name" : "Differential Equations and Dynamical Systems",
+        "name" : "Differential Equations & Dynamical Systems",
         "description" : "Covers ordinary differential equations in one and higher dimensions: qualitative, analytic, and numerical methods. Emphasis is on differential equations as models and the implications of the theory for the behavior of the system being modeled and includes an introduction to bifurcations.",
         "skills": []
     },
@@ -135,14 +135,14 @@
     {
         "subject" : "math",
         "number" : 2240,
-        "name" : "Theoretical Linear Algebra and Calculus",
+        "name" : "Theoretical Linear Algebra & Calculus",
         "description" : "Topics include vector fields; line integrals; differential forms and exterior derivative; work, flux, and density forms; integration of forms over parametrized domains; and Green's, Stokes', and divergence theorems.",
         "skills": []
     },
     {
         "subject" : "math",
         "number" : 2230,
-        "name" : "Theoretical Linear Algebra and Calculus",
+        "name" : "Theoretical Linear Algebra & Calculus",
         "description" : "Topics include vectors, matrices, and linear transformations; differential calculus of functions of several variables; inverse and implicit function theorems; quadratic forms, extrema, and manifolds; multiple and iterated integrals.",
         "skills": []
     },
