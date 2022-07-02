@@ -3,5 +3,9 @@
     margin-right: auto;
     width: 40em;
     border: 4px solid black;
+    background-color: rgb(230, 230, 230);
     padding: 10px;
+}
+.blogpage {
+    background-color: rgb(125, 112, 152);
 }
