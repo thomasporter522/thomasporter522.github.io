@@ -33,6 +33,12 @@ def get_classes(classes):
         rdict[clas["subject"]].append(process_class(clas))
     return rdict
 
+def process_reading(reading):
+    item = "<b><em>" + reading["title"] + "</em></b>"
+    if "author" in reading.keys():
+        item += ", " + reading["author"]
+    return "<li>" + item + "</li>"
+
 def generate(maintemplate, maindest, blogtemplate, blogdest):
     f = open(maintemplate, "r")
     result = f.read()
@@ -68,6 +74,11 @@ def generate(maintemplate, maindest, blogtemplate, blogdest):
     class_dict = get_classes(classes)
     for key, value in class_dict.items():
         result = result.replace("#"+ key + "classes", "".join(value))
+    f.close()
+
+    f = open("data/reading.json")
+    readings = json.load(f)
+    result = result.replace("#reading", "".join([process_reading(reading) for reading in readings]))
     f.close()
 
     f = open(maindest, "w+")
