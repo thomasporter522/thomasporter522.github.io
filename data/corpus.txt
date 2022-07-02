@@ -1,0 +1,655 @@
+Abstraction, Formalism, and Symbolism
+
+    The concepts of abstraction, formalism, and symbolism permeate computer science, philosophy, and ideas about linguistics, cognition, and physics. They are also very related in meaning, even to the point of synonymy in some contexts, yet are rather difficult to define. Here I will discuss my ideas about what each means, how they connect, and how they are distinct. 
+
+    Abstraction
+
+    Abstraction is sometimes defined as simplification or generalization. In computer science, abstraction is the removal of the details of a process or system, and the preservation of the actual functionality of the process or system. It is rather like drawing a box around a diagram, so that the box can be used as a basic component in future diagrams. This is useful for efficiency of design, so that a complicated system can be expressed as a chain of relatively simple systems defined in terms of each other. It is also useful for abstracting "implementation details" so that the same system can be implemented in different environments. This gives a compositionality and universality to technological designs.
+
+    In mathematics, one might define such a process as a 'mapping that preserves (some) structure, but not all information.' Abstraction is a mapping, since it associates systems with abstract representations. It preserves some structure, since some relevant features of the system remain with the representation. It does not preserve all information, since its purpose is to simplify, and forget some details about the system. 
+
+    Another mathematical way of defining abstraction is the imposition of an equivalence relation on a set of systems. In other words, various systems that are different (in their details) are considered equivalent in some sense (if they have the same "abstracted features"). The neat thing is that these two mathematical interpretations of abstraction are mathematically correspondent; any structure preserving map from a set or structure induces an equivalence relation on that set or structure, defined by "a is equivalent to b if f(a) = f(b)," and the case of information loss (some details are forgotten) corresponds to the case when the equivalence relation is nontrivial (different from just equality). 
+
+    So an abstraction is a simplification, a mapping that preserves some desired structure while forgetting some undesired structure. It is useful for building stacks of technology in a way that is understandable to humans, by allowing designers to express systems in terms of smaller systems, instead of atomic components (we don't have to write all programs in machine code). It also increases efficiency, since it allows us to reuse systems that have already been defined (we don't need to make custom circuits for each computation). In mathematics, abstraction (or quotienting) is used to isolate or define structures that would be hard to define otherwise. In fact, "definition through abstraction" is used in the foundation of math, all the way from defining the integers in terms of the naturals to defining homotopy classes. 
+
+    Abstraction is also at the heart of language, both natural and programming, and at the heart of theory, both scientific and mathematical. This correspondence is very exciting to me, and I may make another blog post about just this. 
+ 
+    It took me a very long time to understand how the different definitions of "formal" are related. In human society, it means official, or obeying specific procedures. It can also mean rigorous or symbolic, when referring to a proof or reasoning.  But etymologically it just means "relating to form," so what do those two meanings have to do with shape? 
+
+    The answer occurred to me when I thought about formal sums in math. A formal sum is a sum between objects which may not necessarily be summable in a traditional sense. For example, I could formally sum a giraffe with a zebra to get "giraffe + zebra." What is giraffe + zebra? Well, the answer is that it is just "giraffe + zebra." It doesn't simplify to anything, but it still exists. It can only simplify according to general properties of the + operation. For example, I know that giraffe + zebra = zebra + giraffe, and that giraffe + zebra - giraffe = zebra. The formal application of operations makes sense for any operation, and has interesting properties if any rules about the operation are defined (such as commutativity). My post on <a href="https://thomasporter522.github.io/blog/posts/Morphic-Programming/">morphic programming</a> is largely based on the interpretation of type constructors as formally applied functions. 
+
+    I think that formalism is the correspondence between a system and a syntactic system, meaning a system composed of inherently meaningless elements (symbols) with manipulation rules. 
+
+    This extracts some desired properties of the original system, or perhaps all properties, into a system, the only meaning of which is syntactic or structural. This syntax and structure reflects the "shape/form" notion from the etymology. For example, a formal definition of "and" is that "A and B" is exactly that which can be derived from "A" and "B", and from which "A" can be derived and "B" can be derived. This is a syntactic system that does not remark on the meaning of "and" except through specifying the shape of the logical arguments that can be made with it. 
+
+    So formalism is often a case of abstraction, in which dynamic or structural information about a meaningful system is captured in the structure of a system or inherently meaningless elements. This intrinsic meaninglessness is exactly the heart of symbolism. 
+
+    Connection
+
+    So, to what degree are all of these words synonyms? I have indicated above that formalism is a type of abstraction, and that formalism involves symbolism. In fact, I may go so far as to say that formalism is the intersection of abstraction and symbolism, since my definition for formalism involves a simplifying map, and has the requirement of meaningless symbols. But symbolism can exist without abstraction, since arbitrary signals can have reference without representation. For example, a person's name is a symbol for them, but nothing much about it or its syntactic behavior indicates anything about the person. Conversely, a pictogram can be an abstraction of a real class of objects, but is a compressed encoding of real features so is not symbolic by the definition used here. Though in a more general sense, a symbol can just mean a unit of signal. 
+
+    Natural language is a huge mishmash of these concepts. Most of our language signals are inherently meaningless, and gain some meaning through their relationship with each other (as in word vectors), and some meaning from the situation in which they are used. So language is largely symbolic, and partially formal. Language is also a central domain for abstraction, and I think that every word's <em>meaning</em> is an abstraction. The word itself is a symbol that has no structure on its own (a symbol), but it encodes a cognitive meaning that is a useful, structured generalization of phenomena (an abstraction). Syntax and other linguistic structure that allows the composition of words is an instance of formalization, as it conveys meaningful structure of ideas through the coarse shapes of symbols. 
+
+    There is an interesting connection to machine learning here. An autoencoder is a type of neural network that is trained to simply output its inputs. The catch is that the interior of the network is narrower than the beginning and end, so its forced to compress the information about its input, and ends up coming up with efficient representations of the type of data it receives. This can be used to reduce the dimensionality of the data, and find patterns. In other words, it is an abstraction machine. 
+
+    The problem is that if you give it too many layers, and let it get too complex, it will not choose representations that reflect anything about the data. It's as if instead of copying a picture into simpler version of itself, the encoder just started writing bar codes for each picture. It can technically convey all the information, but it has lost its structure. In other words, it has produced symbolism. This tends to overfit the data, and ruins the model. 
+
+    I find it interesting that naive, or computationally efficient signals are abstracted representations, and that greater computing power naturally produces systems that utilize symbolism, which is more efficient for space. It reminds me of the evolution of many writing systems from pictographic to syllabic or alphabetic. It also makes me wonder how much of our thinking is syntactic rather than semantic, and if we risk losing generality of thought by relying on symbols.
+
+    Thank you for reading! I would be interested to know any thoughts you have about this topic.
+
+    Automated Modularization
+
+    This post is similar to <a href="https://thomasporter522.github.io/blog/posts/Morphic-Programming/">my last</a>, on what I called morphic programming, in that it is a pie-in-the-sky, uninformed daydream about a possible feature of computer programming paradigms. This idea arose out of the redundancy between different programming languages, and within programming languages between different projects. Different languages are used for different purposes, including specialized collections and levels of abstractions, and different projects using the same language are even more obviously divergent. But for almost every programming language, the functionality relating to arithmetic, logic, strings, arrays, etc. must be independently implemented. Within languages, plenty of functions, data structures, and classes are common enough to appear frequently in projects without being implemented in the base language or a library.
+    
+    This issue is precisely a mismatch between the distribution of implementations of 'modularizations' (which I use to mean pieces of code packaged into units like functions, data structures, or classes) and the distribution of their uses. I envision an improvement along the lines of automated modularization, which would consist of a base layer of expression (like machine code, a simple imperative language, lambda calculus, or even something morphic), and an adaptive system which automatically packages common pieces of code into modules. This idea is, in fact, essentially automatic language definition, modulo choosing syntax, since it takes a base layer of expression as a semantics and automatically identifies the most useful higher-level entities.
+
+    This project might begin by collecting as much real world code as possible, translating that code into the chosen lowest level of abstraction, and producing a list of modularizations (function, data structure, or class definitions) according to some optimization principle. This principle ought to balance such aims as:
+
+    minimizing the expected length of a program written with all available modules
+        maximizing the expected length reduction from the program written the lowest level to the program written with all available modulesbounding of the number of modularizations
+        bounding from below the computational 'distance' between different modularizations, so as to minimize their redundancy
+
+    The full formulation of what should be optimized would surely be very subtle, as evidenced by the simultaneous necessity and opposition of the above principles, but in any case would probably have something to do with maximizing the entropy that each keyword would convey within each program. This makes me wonder if the process of automatic modularization might resemble a decision tree algorithm in classification problems. I also think this notion of automatic, optimized language definition on a low level semantics holds striking parallels to the notion of automatic extraction of effective theories about a fundamental system.
+
+    The goal of such a system is for programmers to be able to write at whatever level of abstraction is intuitive to them, with an organic cooperation between individual projects and the automated system as a whole. Each new project (if the creators should permit its use for updating the language) could inform slight adjustments or additions to the language, and each time a programmer writes, or starts to write, the code of a module that has already been identified, the IDE could suggest the use of this module. In this way, the programmer could gradually learn more and more about the range of possible modules, which would far exceed that of the core languages we use now. The number of modules included in the workspace of a programmer could vary by the amount of space manually allocated, or automatically by what appears to be relevant to the programmer. 
+
+    Like with morphic programming, the feasibility of such a system relies on a very smart machine, which would do much more decision making than we currently have our machines do, in the area of programming languages. These dreams arise from looking towards the future, towards what would be optimal for human use, within what is possible for computer performance, rather than what is acceptable for human use, within what is plausible for computer performance.
+
+Causal Loops
+
+    I was thinking about causality and its representation as a directed, acyclic graph when I realized how often we think of causality as cyclic. Feedback loops, and interaction in general, are well described as cycles of causal relations. So how does this interact with the general notion of acyclic causality?
+
+    The best way for me to think of these is as "causal helices." When we 'mod' a helix by the lateral plane, it is mapped to a line. When we mod it by the dimension of its central axis, it indeed is mapped to a circle. The familiar notion of a helix is perfect for this idea that acyclic patterns are mapped onto cycles without contradiction. 
+
+    This is an elaboration of the familiar situation of interacting systems. Usually the behavior of these systems is governed by differential equations, seen as the continuum limit of these causal helices, when such a limit exists. But when dealing with cyclic causality in the form of these modded causal helices, the resulting differential equations always have solutions for any initial configuration, since the interdependent equations (reflecting pseudo-cyclic causality) are actually emergent from independent dynamics (reflecting helical, thus acyclic, causality). So we are used to our dynamics of interaction being able to evolve from any starting state, despite the formally cyclic causality.  
+
+    This brings us to bona fide causal (or 'closed, timelike') loops. Their possibility is debated, and the controversy, as I see it, boils down to the fact that they can be mathematically consistent (namely, under the requirement that they be mathematically consistent), but they are not consistent with our assumption of "any possible starting state" from above. This is because an integral equation is added to the differential equation, and may not have so general a solution. In other words, on one hand there are physicists who are happy with cyclic causality, as long as at each point in the cycle, the laws of physics are obeyed. Essentially, if you were to be inside the loop, and you evolved according to the laws of physics, then as long as those laws put you exactly back in your initial configuration by the time you got back to the "beginning" of the loop, you have successfully avoided all paradoxes and there's no reason to outlaw that system as physically impossible. The problem is that <em>if</em> we were to magically inject a state into that loop, without the property of returning to its starting state (i.e. the laws of physics are incompatible with a causal loop with that state in it), then we would have a paradox. The other camp is not happy with this inability of a system to accommodate any state, and with the non-locality that would seem to be necessary to "enforce" an integral equation.
+
+    I am not very familiar with the debate on this issue (of which there has surely been plenty), so please consider this post is a mere initial foray. I do not know what I think about genuine cyclic causality, but I have yet to be convinced that this magic <em>if</em> of state injection gives any trouble to the possibility of closed, timelike curves.
+
+    An interesting addendum: the magic <em>if</em> would qualify, to a philosopher, as a counterfactual. In what I think is actually a strange coincidence, philosophers and lawyers use counterfactuals to <em>define</em> causality in the first place! Such a construction requires modality, possible worlds, and generally 'escaping the system' in a way that does not convince my physicist aspect, and I think a similar failure occurs when trying to use it to rule out closed timelike curves. It seems that to use such an argument would be to say "such and such causal structure would <em>cause</em> a contradiction" (where the first notion of causality is physical, the second epistemic or modal). My basic reaction to this is to reject a multilayered causality, and instead credit the first layer, of physical causality, as having the final say.
+
+Family Relation Diagram
+
+    After watching Michael Stevens' <a href="https://www.youtube.com/watch?v=IFngqro5yyQ">video</a> explaining the types of family relations (as they are categorized in <a href="https://www.youtube.com/watch?v=YOi2c2d3_Lk">English</a>), I set out to represent these relations as intuitively as I could. The result was a tidy diagram that has many nice properties. Here it is:
+
+    (I'm sorry, graphic design is not my passion). "1R" stands for once removed. The grid extends indefinitely upwards and rightwards, and the lines denote the child-parent relationship, with the parent being the one above or to the left. This layout has the following properties:
+
+    Reflection across the diagonal maps each relationship to its converse, e.g. if A is the niece/nephew of B, then B is the aunt/uncle of A. Note that 'self,' 'sibling,' and 'nth cousin m times removed' are all mutual relationships. 
+        The diagonal contains all degrees of cousins, and distance from the diagonal is the degree removal, which is also the difference in generation. The border contains all direct ancestors/descendants, and grid-distance from the border is the degree of cousin. 
+        1/2 to the power of the  of diagonals" away from 'self' gives the proportion of DNA that one expects to share with that relation. You share 100% with yourself, 50% with your parents and children, 25% with your grandparents, grandchildren, and siblings, etc. 
+
+    There is even a calculus for composing relations, which is admittedly not as elegant as the above properties, nor unique to this representation. In fact, this way of composing relations is not very geometrical or original, but I'll include here as a relevant matter. 
+
+    As an example, if we want to know what relationship one might have with one's aunt's cousin, we first see that to get from 'self' to 'cousin,' we walk up two, and then down two in the other direction. We can take this same path from 'aunt,' and arrive at 'first cousin once removed.' As another example, the great-nieces and nephews (up, down, down, down) of one's great-uncle could be one's self, siblings, or first cousins. It is important not walk up, then down on the same path.
+
+    The diagram neglects many important features of family, such as half-siblings, step-siblings, in-laws, or cases when the family tree is not strictly a tree (due to blood-related parents or time travel). I hope you find it interesting anyway!
+ 
+Generalizing Let Expressions
+
+    The lambda calculus consists of two basic operations; function abstraction and function application. 
+        I prefer to write function abstraction using a simple arrow notation. My notation is on the left, and the traditional notation is on the right.
+
+    And I prefer to write function application using the pipeline operator, represented as a little triangle. 
+
+    The semantics of the let expression, ubiquitous in functional programming, may be simply expressed as:
+
+    That is, within the body of the let expression (here E[x]), the symbol x evaluates to e. We may also understand the semantics as:
+
+    Which will elucidate the generalizations. When programming, I have been finding myself writing expressions of the form: 
+
+    Where E may be rather complicated, and in fact may contain nested expressions of the form above. 
+        Map and bind are ubiquitous operators which, like application, take as arguments a value, and a function, and perform some 
+        kind of alternative to direct function application. Maps are associated with all functors, and bind is associated with monads,
+         which represent a special kind of functor.
+
+    But defining my own function for such a narrow use felt pretty clunky. 
+        I realized that let expressions solve exactly this problem, but for the application operator, rather than map or bind. 
+        Let expressions allow you to implicitly chain together function abstractions, which are immediately applied to some argument. 
+        This suggests the following constructs. 
+
+    I found the Jane Street indeed has an <a href = "https://github.com/janestreet/ppx_let">implementation</a> of this kind of thing, 
+        and adjacent constructs. These feel nice, but all told, not too remarkable. The thing that really pleases me is a notation I'd like 
+        to adopt for these constructs. First, I'd like a notation for map and bind that suggests their ubiquity and analogy with 
+        plain function application.
+
+    A notation I like for let expressions is the backwards arrow for assignment... and let expressions are for application...
+        and arrows can be made to incorporate the little triangle ... which leads me to this: 
+
+    How does this notation look in practice? Here are two simple examples.
+
+    Inreasing every element of a list by two. Assume l is a list of numbers.
+        
+    Perform an operation on two options/maybes if both succeed. Assume e1 and e2 are both options/maybes of some type T, and that f takes in a pair of Ts. 
+    
+    This seems pretty reasonable to me! What do you think?
+
+    Group Theory Circle
+
+    As I was doing my abstract algebra homework one day, I was trying to force an equation like 'ghg<sup>-1</sup>=h' into a different form. This led me to probe the internal structure of such an equation, and I sensed that my manipulation of the equation did not alter a kind of cyclic structure of the equation. I realized that it really ought to be represented as a circle of group elements, with left or right cancelling corresponding to changing the way the circle is divided up. I think it's best for you to <a href="https://www.khanacademy.org/computer-programming/group-equation-circle/5074619710586880">try it yourself</a>.
+
+    The diagram stands for the equation of the two sides, read 'along' the arrow. The idea is that 'moving' a term from one side of the equation to the other does not change this cyclic structure, but does invert the element and change where the equals sign goes. As I see it, the depiction of a circle of terms with an arrow on top neatly separates what is equivalent about all forms of the equation (the circle) from the variability in representing the equation (the arrow).
+
+    A cool feature of this representation is that the reversal of the arrow corresponds to an inversion, and reversal of the order of all elements. This makes obvious (not that it was very obscure before) the fact that (ab)<sup>-1</sup>=b<sup>-1</sup>a<sup>-1</sup>.
+
+    I imagined that this representation could be useful for actual human computation, by doing away with the arrow all together. All that would remain is to incorporate the introduction and elimination of inverse pairs, the combination of multiple equations, and maybe the manipulation of subexpressions according to a group presentation. 
+
+    Unfortunately, this rather intriguing story came to an end when I realized, the day I discovered this, that my circle was nothing more than a commutative diagram. All of the geometric purity I had found, and all of the manipulation I was envisioning, is encompassed in the manipulation of categorical diagrams, specifically those for groupoids. At the very least, this excursion made me appreciate the categorical tradition even more.  
+Morphic Programming
+
+    I'm far from up to date on the current theory of programming languages, but an alternative programming paradigm occurred to me when learning functional programming last year. It is essentially a simplification of functional programming in an effort to increase theoretical beauty, a goal already aligned with the philosophy of functional programming. The simplification takes inspiration from category theory and the Wolfram Language. 
+
+    The main idea is to generalize type constructors and functions into the same object, a morphism (in the categorical sense). In standard functional languages (at least Haskell and OCaml), type constructors can be applied to one type to create an value of another type, but are only applied 'formally' or 'symbolically,' meaning that the resulting value has no form other than 'constructor(argument).' Functions also can be applied to values of a certain type, but must be endowed with semantics such that the resulting value is not of the form 'function(argument).' In other words, in these traditional functional programming languages, type constructors are morphisms that are without semantics or simplification rules, while functions are morphisms that must always have such things. 
+
+    Enter the Wolfram Language. Steven Wolfram is very proud of the simple, unified, symbolic nature of the underlying system to the language, as well he should be. Functions in the Wolfram language are applied formally, and simplified in certain cases according to their semantics. This means that values and expressions look the same, both being the composition of functions. I find this system extremely elegant. But the Wolfram Language does not yet (I believe) include user defined types, nor even user defined functions that are allowed to behave in this 'conditionally applicative' manner! The Wolfram Language also diverges from the traditional functional programming languages by distinguishing between operations and functions, and by not emphasizing currying or higher order functions. The language instead has an immense library of basic data structures and functions that practically eliminate the need for users to define their own, except as simple compositions of the powerful built-in functions. 
+
+    With the Wolfram idea, which I will call conditional application, traditional functional programming would be drastically simplified. Here is my image for what a program would consist of:
+
+    A set of names of typesA set of morphisms, each with a source and target typeA set of commutative diagrams that allow an expressions to be simplified
+
+    An expression would simply be a composition (or product, coproduct, etc) of expressions or morphisms. The compiler would have to understand how to work in a category, and with products, coproducts, and exponential objects. The commutative diagrams would have to have a directionality, and be acyclic, in order for there to be a consistent direction of simplification. Perhaps a further condition on the commutative diagrams would need to be required of the programmer, or imposed by the compiler, in order for the connected components of the hom-sets to actually have minima (these corresponding to the normal form of an expression). 
+
+    This picture is essentially of nothing more unique than some kind of finitely generated category. This suggests that we might want the language to include higher order notions, certainly including endofunctors, and possibly more elaborate tricks. 
+
+    The hope is that this very high level way to interact with a computer would be highly extensible and general, a version of functional programming that is less restrictive, but in which encoding the usual functions and type constructors is essentially as easy.
+
+    I have a confession to make: there is a massive problem with this scheme. It removes the programming form programming. There is no way to specify implementation, except by totally tricking and abusing the system. If we want to represent the naturals using the Peano encoding, storing an number would be linear in space. Addition would be linear in time. And it only gets worse form there. 
+
+    The truth is that this paradigm could only work if design and implementation are decoupled, as we are a long way from. The real technology that this project would require is <em>automatic implementation</em> of high level behavior. An optimizing compiler would deduce the fact that naturals should be stored using a binary number system. 
+
+    At this point, these ideas are a daydream. Current programming languages are compromises, no doubt very good ones, between implementation and abstraction. But I am looking ahead to what the the most elegant way to fundamentally specify a functional program might be, and I think this optimum is closer to something like morphic programming. 
+Objects and Arrows
+
+    There is an amazing pervasiveness of objects and arrows in our formal descriptions of reality, particularly when the arrows are acyclic. This post is essentially my attempt at getting my head around this amazing unity. I start with a list of related concepts that I composed after thinking about the Wolfram Model, which I find very compelling.
+
+    
+        Categories: the most famous and obvious domain of objects and arrows, generalizing sets and functions.
+            
+                Can be used to represent structures (Lawvere theories and sketches)
+                Can be used to represent logic, both by modeling logical structures and logical derivations about structures
+                Resemble the encoding of accessibility and modalities, à la Kripke frames
+                Resemble causal diagrams, à la Judea Pearl's causal calculus
+                Resemble causality in physics, à la causal set theory and the Wolfram Model
+            
+        
+        Causality: a central feature in physics, and (in my opinion) the largest philosophical obstacle to thinking of reality as a bare mathematical structure
+            
+                Recovers normal modal logic when used with Kripke frames
+                Essentially produces time, which produces our intuition of mappings, logical derivations, and computations
+            
+        
+        Possible worlds
+            
+                Logically modeled with Kripke semantics
+            
+            
+                (Meta-)physically manifested, as Max Tegmark classifies, as
+                    
+                        Possible mathematical structures of the universe
+                        Possible fundamental constants
+                        Possible initial conditions
+                        Quantum branches
+                    
+                
+                (Meta-)physically manifested, in the Wolfram Model, as
+                    
+                        Possible rules, or foliations of rule space
+                        Possible initial conditions
+                        Quantum branches
+                        Perhaps foliations of the multiway causal graph?
+                    
+                
+            
+        
+        Quantum branches
+            
+                Correspond to different causal chains from the same initial configuration
+                Correspond to different derivations from the same premises?
+            
+        
+        Structures
+            
+                Composed of structureless objects and relations or mappings between them
+                Thought of as objects, and mappings exist between them
+                Statements about the structure are thought of as objects, with derivations as mappings between the statements
+            
+        
+    
+
+    Wowza! I find that the items on this list are shockingly interrelated on many different levels, and I think many interesting things may be observed from this.
+
+    The fist observation is that structures are objects, given structure by mappings between others. But this is an abstraction of structures as collections of lower level objects, formalized by mappings among them. Most strikingly, statements about structures are objects, and they are given by axioms and derivations, which themselves are given by the mappings defined on the structure to begin with. In other words, statements about the structure are mapped in accordance with the maps that define the structure itself.
+
+    The principal observation is that we apparently can only formalize objects using lower level objects. From the model theory perspective on the foundations of mathematics, every thing is a set of little things called elements. These elements are, by themselves, essentially meaningless, and seem to barely deserve the name of "thing." The categorical approach is primarily about abstracting away elements, so that the only things present are the actual objects we care about. This is achieved by letting mappings take care of all the structure. A special power of category theory is that higher categories allow us to think of the mappings, or the collections of objects, as themselves objects.
+
+    Even before the experimental confirmation of atoms, the ancient Greeks suspected tiny objects out of which every object is made. It turns out that they were right, and it also turns out that atoms are made out of smaller particles. Even when particles behave like quantum fields, we treat excitations as objects, the fields as objects, and the fields as structures made out of objects. This pervasiveness seems remarkable to me, and I see the following possible explanations:
+
+    The concept of "object" is so inherently applicable as to appear everywhereThe fact that the universe is made of objects give rise to high level objectsThe presence of high level patterns in the universe that we classify as objects has molded our cognition to inevitably think in terms of objects
+
+    I admit that these options and the issue itself are not very clear cut.
+ 
+    The same thing applies to arrows, but these are considerably more interesting and complicated. I am certainly of the opinion that the cognitive reality of mathematics is undervalued, and that people are far too mystical and romantic about the existence of some Platonic realm of math. I think that it is a simple, pragmatic, cognitive reality that we think in terms of objects (as a memory and computation saving compression) and in terms of mappings (under the guises of properties, relationships, and derivation). I think that time and causality on a high, emergent physical level is where our intuition about mappings and derivations comes from. 
+
+    In conclusion, I wonder if the role of objects and mappings as pragmatically optimized cognitive heuristics is why our physical and mathematical (indeed, formal) theories all revolve around them. But especially in the case of derivations/mappings/computation, its presence on a fundamental level appears to give rise to its high level presence anyway. I think only a thorough understanding of physical reality could answer this chicken and egg question.
+Treating Relations as Maps
+
+    For whatever reason, I felt that the classification of functions by the number of images and preimages of elements deserved further examination. The classification I speak of includes the denominations injective, surjective, bijective, total/partial, and single-/multi-valued. Most people who are familiar with these classifications already know that only bijections are invertible as functions, with the corollary that the inverse of a bijection is bijective. But a quick consideration of the definitions of injective and surjective leads one to the (probably useless) observation that the inverse of an injection would be a "single-valued" mapping, and that the inverse of a surjection would be a "total" mapping (if here we allow mappings to include relations that are not single-valued or not total).
+
+    This silly observation made me unhappy with the nomenclature, mainly because the denominations 'surjective' and 'injective' forbid certain behavior, while those of 'partial' and 'multivalued' allow certain behavior. Moreover, 'partial' and 'multivalued' have less common negatives, while there are no standard terms (as far as I know) for failing to be surjective or injective. I am well aware of how ubiquitous the desire to change mathematical terminology or notation is, so consider this a trifle for your amusement rather than a serious proposition. Here is my new, pointless taxonomy.
+
+    To each relation between X and Y can be associated two subsets of {0,1,+}, one for X and one for Y. The X-set corresponds to the set of numbers of Y elements related to each X element (I know this sentence is practically unreadable). For example, if each element of X is related to exactly one Y, the X-set would be {1}. In the case of the empty relation, the X-set is {0}. If the relation represents a partial function, the X-set would be {0,1}. If it represents a multivalued function that is multivalued everywhere, the X-set would be {+}. If some Xs are related to no Ys, some to one Y, and some to multiple Ys, the X-set would be {0,1,+}, etc. The definition of the Y-set is symmetrical. 
+
+    If you have a relation with a specified first set X and a second set Y, here are my rules for naming the type of map it represents:
+
+    If 0 is in the X-set, it's "semivalued" (the negative is "survalued")If + is in the X-set, it's "multivalued" (the negative is "invalued")If 1 is also in the X-set, it's "partially multivalued"If 1 is not, then it's "totally multivalued"
+
+    If 0 is in the Y-set, it's "semijective" (the negative is "surjective")If + is in the Y-set, it's "multijective" (the negative is "injective")If 1 is also in the Y-set, it's "partially multijective"If 1 is not, then it's "totally multijective"
+
+    For the sake of completeness, I specify that a map should be labelled with any applicable modifiers, in the order listed above, with:
+
+    "survalued, invalued" or "surjective, injective" replaced with "bijective"The last modifier made into a noun ("partially _-valued" -&gt; "partial _-valuation")
+
+    What do you think of this terminology?
+
+    Trees, Strings, and their Bijections
+
+    While working on <a href="http://github.com/thomasporter522/pasture">my programming language</a>, I noticed a pleasing bijection between the set of binary trees and the set of general trees (these trees being finite, rooted, with ordered children, with nodes containing no extra data, and considered up to isomorphism). I would never have thought such a bijection could possibly be very natural, and I would have a very hard time coming up with a good one, except for one key clue: currying. 
+
+    This bijection comes from considering these trees as representing trees of function application. Consider a structure, the elements of which are supposed to represent functions, and the sole binary operation of which represents function application. In this case, functions should be thought of as "higher order," so that functions can be applied to functions, and can output functions. An expression in this syntax will be a binary tree, with each leaf being a function and each node being an instance of the function application operation between its two children. 
+
+    In systems like this, since each function can only be applied to one argument, it is not obvious how to encode a function of "arity" (number of inputs) greater than 1, like addition (which is binary). The standard method is called "currying," named after Haskell Curry. When you curry a function like addition, you change it from a function that takes in two numbers and outputs one number, and turn it into a function that takes in one number (the first argument) and outputs a <em>new</em> function, which itself takes in one number (the second argument) and outputs one number (the result). So the second tree above, representing f(g)(h), has the same structure as a curried addition applied to two numbers +(1)(2) = 3. Just to avoid confusion, note that if we are in a system in which everything is a function, numbers would have to either be encoded as functions, like Church encodings in lambda calculus, or could be considered nullary (0 arity) functions. 
+
+    So this is the binary tree side. But expressions of function application can also be expressed, more naturally perhaps, using general trees, in which each node is a function, and its children are its arguments. This is like a traditional abstract syntax tree in computer science. 
+    
+    Here each node is a function, with the number of children being the number of arguments. Constants like true (T) and false (F) take no arguments, so are leaves. The if-then-else function takes three arguments.  
+
+    I have stated two ways of corresponding expressions of function application with trees, and thus implicitly a correspondence between those two types of trees. So, to map a binary tree onto a general tree, just imagine it represents curried function application, and construct that function tree, and vice versa. The resulting bijection is very pleasing (note that the binary function application trees are reversed from their normal orientation; this is because the pasture programming language embraces a left to right philosophy, so the function comes after the arguments):
+
+    g (orange) takes in three arguments, which are curried in the left tree but children in the right tree. This bijection can be seen as a contraction of contiguous diagonals (the colored diagonals) into single nodes, with an expansion as the inverse. Notice how each colored diagonal has "children" given by the trees that are branching down from it in the other diagonal direction. This bijection is apparently from binary trees with labeled leaves to general trees with labeled nodes, but when such labels are trivial is also a bijection between unlabeled binary trees and unlabeled general trees. 
+
+    After identifying this bijection, I also wondered about string representation. In pasture, expressions are written as infix binary function application trees, with spaces representing the function application operation. This necessitates parentheses, as infix notation generally does. 
+
+    a b ((c (d e)) (f g))
+
+    Although using my delayed application notation, this can be improved to:
+
+    a b,(c,d e),f g
+
+    These strings, ignoring parentheses, can also be thought of as a postfix representation of the general function application trees. But postfix famously does not require parentheses, as long as the arity of each function is known (which it is not, in pasture). So this raises the question; should these trees be represented as postfix/prefix strings of the binary application tree, where the arity of the sole operation (function application) is known, and parenthesis are not needed? Well, here is what that would look like for the binary tree in the example picture (with '*' denoting the function application operation):
+
+    a b * c d e * * f g * * *
+
+    Let's compress all these repeated '*'s. 
+
+    a b (1) c d e (2) f g (3)
+
+    But this is the same as annotating each function with its arity! 
+
+    a (0) b (1) c (0) d (0) e (2) f (0) g (3)
+
+    This discovery rather delights me. I thought I had found a new way to circumvent the need for parentheses, and it unexpectedly reduced to the old way to circumvent it!
+
+    Here's a rough approximation of the commutative diagram:
+
+    I hope you enjoyed this post! What's your favorite bijection?
+
+    Visualizing Meter
+
+    I was learning about a variety of Latin meters, including hendecasyllabic, when I came up with a way to visualize them that I found interesting. Classical Latin poetry has quantitative meter, meaning the value of a syllable is based on the length of time it takes to say, rather than its stress. The syllables of the meter might traditionally be represented as:
+
+    Where ¯ represents a long syllable (2 <a href="https://en.wikipedia.org/wiki/Mora_(linguistics)">morae</a>) and ˘ represents a short syllable (1 mora).
+
+    The idea for the visualization is to draw a line, representing time, with evenly spaced ticks representing morae. Then, draw a dot on each tick on which a syllable starts. Now, wrap the line into rows, one row being n morae long. Triple meters will look more ordered when n = 3, quadruple when n = 4. Perhaps the whole point of this notation is that viewing the same meter with different n reveals something of their structure. 
+
+    Here is hendecasyllabic in quadruple (n = 4) representation:
+
+    The central features, to my eyes, are the columns of dots on the first and third beats, which a musician would call the "strong" or "on" beats. This reveals the quadruple or duple nature of the meter, and the gap near the end shows the syncopation that gives the meter its playful swing. But another observation can be made, and that is the diagonal line extending up and to the right of the last dot. It actually includes the third dot as well, though this is not obvious because of the wrapping line. The slant of this line indicates that the dots are actually spaced thee morae apart (if it were slanted in the other direction, they would be five apart). And indeed, when we represent the meter in triple representation:
+
+    We see a strong central column. In fact, since we can start the meter at any point in the diagram, we might want to make this the first column:
+
+    The exciting thing about this meter, to me, is that it has a strong triple <em>and</em> quadruple component, and they dance together jauntily until they both land strongly on the last syllable. This gives the meter a unique sense of tension and resolution that I can hear, but I would not have noticed without examining the geometry like this. 
+
+    I actually think hendecasyllabic is also well represented by changing n in the middle of the line, as such:
+
+    This makes the meter look much tidier and more natural than its representation as:
+
+    But misses the simultaneous interplay between the triple and quadruple rhythms. It is interesting to look at many other meters using this method. I won't include them here, but I will include the particularly neat example of the short line in Sapphic strophe:
+
+    This little line consists of two columns, one of dots evenly spaced apart by two morae, the other by three. The columns begin together, and the line ends when they 'reconvene' after lcm(2,3) = 6 morae. This notation also led me to create my own meter, which is the analogue of the above, but with a two column, a three column, and a five column. In other words, it is the minimal, perfect meter that is duple, triple, and quintuple. The result is lcm(2,3,5) = 30 morae long, which might be pushing it, but I think it sounds alright. The meter is:
+
+    Dum diddle diddle dum, diddle dum dum diddle, 
+
+    dum dum diddle dum, diddle diddle dum dum.
+
+    You can see 'columns' of three (colored green) and of five (colored red):
+
+Why is Color 3-Dimensional?
+
+    Because humans have three kinds of cones: light receptive cells in our retina that are sensitive to different wavelengths of light. We have cones that correspond to red (long wavelength), green (medium wavelength), and blue (short wavelength), which are the three dimensions of human color vision.
+    Next question: why do we have three kinds of cones? Why not two? Five? 16? There may be no good answer to this, as many species have different numbers. But I will offer my speculation.
+    
+        Observation 1: the space of wavelengths of light is 1-dimensional. It's represented by a single number, and the gamut can be seen across a rainbow.
+        Observation 2: Sunlight contains a relatively even spread of wavelengths. 
+        Observation 3: It seems like a lot of what we see has either extra intensity or extra deficiency in one specific wavelength. This is the most arguable observation, and is quite a generalization, but I think it leads to an interesting conclusion.
+    
+    The conclusion is that most light intensity profiles we see look something like this:
+    With some intensity of background light (c), and an anomaly of some intensity (b) at some wavelength (a). This is three dimensions, so three cones are needed in order to perceive all combinations of these parameters as different, and additional cones only provide information about deviations from this family of profiles.
+    And that's really the whole argument. But let's unpack it a bit.
+    The value (a), or perhaps some weighted average of (a) and (b) depending on how broad our anomaly is, corresponds to the dimension of lightness. We also have rods, which only detect lightness, but they seem to me to be generally redundant with the combination of cones. I'm not sure why. Were they not redundant, this argument would not apply.
+    The value |(a)-(b)| represents the difference between the background light and the anomaly, or how far the light profile is from gray (a simple uniform intensity). This is saturation.
+    The values of lightness and saturation have interpretations for any number of cones: lightness is the sum of cone intensities, and saturation is some kind of variance (I think usually the maximum difference) between the various cone intensities. "Hue" refers to all remaining degrees of freedom, and has dimension equal to the number of cones minus 2 (for lightness and saturation).
+    Geometrically, we may view the space of cone activations as an n-dimensional cube - one axis per cone, ranging from no activation to max activation. Lightness is distance along the diagonal from the black corner (all cones have no activation) to the white corner (all max). Saturation is distance from this diagonal. Hue is what remains. In the case of three cones, the final degree of freedom is circular, representing the angle around the diagonal. For more cones, hue space will always be spherical (of some dimension). It can also be viewed as a simplex, with the vertices as the primary colors of light.
+    The color wheel is our hue space, and the spectrum of wavelengths can be mapped nicely onto it. That is another way of phrasing our conclusion about why three cones is special - because our hue space is the same dimension as wavelength space. With four cones, hue space would be a sphere, and any mapping of the spectrum onto that sphere will waste space. Of course, it's better for more complex light intensity profiles.
+    That's all. I don't know how accurate my caricature of light profiles is, or if that's the reason why we have three cones, but it is an interesting property I noticed. Let me know what you think!
+
+[
+    {
+        " : ,
+        " : 6802,
+         : "Lattices",
+         : "A mathematically rigorous course on lattices. Lattices are periodic sets of vectors in high-dimensional space. They play a central role in modern cryptography, and they arise naturally in the study of high-dimensional geometry (e.g., sphere packings). We will study lattices as both geometric and computational objects. Topics include Minkowski's celebrated theorem, the famous LLL algorithm for finding relatively short lattice vectors, Fourier-analytic methods, basic cryptographic constructions, and modern algorithms for finding shortest lattice vectors. We may also see connections to algebraic number theory.",
+        : []
+    },
+    {
+        " : ,
+        " : 6764,
+         : "Reasoning about Knowledge",
+         : "Knowledge plays a crucial role in distributed systems, game theory, and artificial intelligence. Material examines formalizing reasoning about knowledge and the extent to which knowledge is applicable to those areas. Issues include common knowledge, knowledge-based programs, applying knowledge to analyzing distributed systems, attainable states of knowledge, modeling resource-bounded reasoning, and connections to game theory.",
+        : []
+    },
+    {
+        " : ,
+        " : 4850,
+         : "Mathematical Foundations for the Information Age",
+         : "Covers the mathematical foundations for access to information. Topics include high dimensional space, random graphs, singular value decomposition, Markov processes, learning theory, and algorithms for massive data.",
+        : []
+    },
+    {
+        " : ,
+        " : 4820,
+         : "Analysis of Algorithms",
+         : "Develops techniques used in the design and analysis of algorithms, with an emphasis on problems arising in computing applications. Example applications are drawn from systems and networks, artificial intelligence, computer vision, data mining, and computational biology. This course covers four major algorithm design techniques (greedy algorithms, divide-and-conquer, dynamic programming, and network flow), undecidability and NP-completeness, and algorithmic techniques for intractable problems (including identification of structured special cases , approximation algorithms, local search heuristics, and online algorithms).",
+        : []
+    },
+    {
+        " : ,
+        " : 4812,
+         : "Quantum Information Processing",
+         : "Hardware that exploits quantum phenomena can dramatically alter the nature of computation. Though constructing a general purpose quantum computer remains a formidable technological challenge, there has been much recent experimental progress. In addition, the theory of quantum computation is of interest in itself, offering new perspectives on the nature of computation and information, as well as providing novel insights into the conceptual puzzles posed by quantum theory. This course is intended for physicists, unfamiliar with computational complexity theory or cryptography, and for computer scientists and mathematicians with prior exposure to quantum mechanics. Topics include: simple quantum algorithms, error correction, cryptography, teleportation, and uses of quantum computing devices either currently available or to be available in the near future.",
+        : ["Qiskit"]
+    },
+    {
+        " : ,
+        " : 4780,
+         : "Machine Learning",
+         : "The course provides an introduction to machine learning, focusing on supervised learning and its theoretical foundations. Topics include regularized linear models, boosting, kernels, deep networks, generative models, online learning, and ethical questions arising in ML applications.",
+        : ["TensorFlow"]
+    },
+    {
+        " : ,
+        " : 4700,
+         : "Artificial Intelligence",
+         : "Challenging introduction to the major subareas and current research directions in artificial intelligence. Topics include: knowledge representation, heuristic search, problem solving, natural-language processing, game-playing, logic and deduction, planning, and machine learning.",
+        : ["Python"]
+    },
+    {
+        " : ,
+        " : 4160,
+         : "Formal Verification",
+         : "An introduction to formal verification, focusing on correctness of functional and imperative programs relative to mathematical specifications. Topics include computer-assisted theorem proving, logic, programming language semantics, and verification of algorithms and data structures. Assignments involve extensive use of a proof assistant to develop and check proofs.",
+        : ["Coq"]
+    },
+    {
+        " : ,
+        " : 4120,
+         : "Compilers",
+         : "An introduction to the specification and implementation of modern compilers. Topics covered include lexical scanning, parsing, type checking, code generation and translation, an introduction to program analysis and optimization, and compile-time and run-time support for modern programming languages. As part of the course, students will build a working compiler for an object-oriented language.",
+        : ["OCaml", "Unix"]
+    },
+    {
+        " : ,
+        " : 4110,
+         : "Programming Languages & Logics",
+         : "An introduction to the theory, design, and implementation of programming languages. Topics include operational semantics, type systems, higher-order functions, scope, lambda calculus, laziness, exceptions, side effects, continuations, objects, and modules. Also discussed are logic programming, concurrency, and distributed programming.",
+        : []
+    },
+    {
+        " : ,
+        " : 3410,
+         : "Computer System Organization & Programming",
+         : "Introduction to computer organization, systems programming and the hardware/ software interface. Topics include instruction sets, computer arithmetic, datapath design, data formats, addressing modes, memory hierarchies including caches and virtual memory, I/O devices, bus-based I/O systems, and multicore architectures. Students learn assembly language programming and design a pipelined RISC processor.",
+        : ["RISCV", "C", "Unix"]
+    },
+    {
+        " : ,
+        " : 3110,
+         : "Functional Programming",
+         : "Advanced programming course that emphasizes functional programming techniques and data structures. Programming topics include recursive and higher-order procedures, models of programming language evaluation and compilation, type systems, and polymorphism. Data structures and algorithms covered include graph algorithms, balanced trees, memory heaps, and garbage collection. Also covers techniques for analyzing program performance and correctness.",
+        : ["OCaml", "Unix"]
+    },
+    {
+        " : ,
+        " : 2800,
+         : "Discrete Structures",
+         : "Covers the mathematics that underlies most of computer science. Topics include mathematical induction; logical proof; propositional and predicate calculus; combinatorics and discrete mathematics; some basic elements of basic probability theory; basic number theory; sets, functions, and relations; graphs; and finite-state machines. These topics are discussed in the context of applications to many areas of computer science, such as the RSA cryptosystem and web searching.",
+        : []
+    },
+    {
+        " : ,
+        " : 2110,
+         : "Object Oriented Programming & Data Structures",
+         : "Intermediate programming in a high-level language and introduction to computer science. Topics include object-oriented programming (classes, objects, subclasses, types), graphical user interfaces, algorithm analysis (asymptotic complexity, big \"O\" notation), recursion, testing, program correctness (loop invariants), searching/sorting, data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms. Java is the principal programming language.",
+        : ["Java"]
+    },
+    {
+        " : ,
+        " : 6810,
+         : "Logic",
+         : "Covers basic topics in mathematical logic, including propositional and predicate calculus; formal number theory and recursive functions; completeness and incompleteness theorems, compactness and Skolem-Loewenheim theorems. Other topics as time permits.",
+        : []
+    },
+    {
+        " : ,
+        " : 4340,
+         : "Honors Introduction to Algebra",
+         : "Honors version of a course in abstract algebra, which treats the subject from an abstract and axiomatic viewpoint, including universal mapping properties. Topics include groups, groups acting on sets, Sylow theorems; rings, factorization: Euclidean rings, principal ideal domains and unique factorization domains, the structure of finitely generated modules over a principal ideal domain, fields, and Galois theory. The course emphasizes understanding the theory with proofs in both homework and exams.",
+        : []
+    },
+    {
+        " : ,
+        " : 4200,
+         : "Differential Equations & Dynamical Systems",
+         : "Covers ordinary differential equations in one and higher dimensions: qualitative, analytic, and numerical methods. Emphasis is on differential equations as models and the implications of the theory for the behavior of the system being modeled and includes an introduction to bifurcations.",
+        : []
+    },
+    {
+        " : ,
+        " : 4180,
+         : "Complex Analysis",
+         : "Theoretical and rigorous introduction to complex variable theory. Topics include complex numbers, differential and integral calculus for functions of a complex variable including Cauchy's theorem and the calculus of residues, elements of conformal mapping.",
+        : []
+    },
+    {
+        " : ,
+        " : 3840,
+         : "Introduction to Set Theory",
+         : "This will be a course on standard set theory (first developed by Ernst Zermelo early in the 20th century): the basic concepts of sethood and membership, operations on sets, functions as sets, the set-theoretic construction of the Natural Numbers, the Integers, the Rational and Real numbers; time permitting, some discussion of cardinality.",
+        : []
+    },
+    {
+        " : ,
+        " : 2240,
+         : "Theoretical Linear Algebra & Calculus",
+         : "Topics include vector fields; line integrals; differential forms and exterior derivative; work, flux, and density forms; integration of forms over parametrized domains; and Green's, Stokes', and divergence theorems.",
+        : []
+    },
+    {
+        " : ,
+        " : 2230,
+         : "Theoretical Linear Algebra & Calculus",
+         : "Topics include vectors, matrices, and linear transformations; differential calculus of functions of several variables; inverse and implicit function theorems; quadratic forms, extrema, and manifolds; multiple and iterated integrals.",
+        : []
+    },
+    {
+        " : ,
+        " : 4425,
+         : "Pragmatics",
+         : "What is the relationship between what words mean and how they are used? What is part of the grammar and what is a result of general reasoning? Pragmatics is often thought of as the study of how meaning depends on the context of utterance. However, it can be difficult to draw a line between pragmatics and semantics. In this course, we will investigate various topics that walk this line, including varieties of linguistic inference (including entailment, presupposition, and implicature), anaphora, indexicals, and speech acts.",
+        : []
+    },
+    {
+        " : ,
+        " : 4403,
+         : "Syntax I",
+         : "An advanced introduction to syntactic theory within the principles and parameters/minimalist frameworks. Topics include phrase structure, argument structure (unaccusative verbs, unergative verbs, double object constructions), principles of word order, and the binding theory.",
+        : []
+    },
+    {
+        " : ,
+        " : 3303,
+         : "Introduction to Syntax & Semantics",
+         : "This course explores both syntax (how words and phrases are combined into sentences) and semantics (how the meanings of words, phrases, and sentences are interpreted). The course aims to give students to the ability to address questions regarding syntactic and semantic properties of languages in a rigorous and informed fashion. Topics covered include phrase structure, grammatical relations, transformations, semantic composition, modification, quantification, and the syntax/semantics interface. Emphasis throughout the course is placed on forming and testing hypotheses.",
+        : []
+    }
+]
+
+[
+    {
+         : ["research", "work"],
+         : "PDG Divergence Research",
+         : "Oliver Richardson, Joseph Halpern",
+         : "Jun 2022 - Present",
+         : "Explored alternative defintions of Probabilistic Dependency Graph inconsistency <a href = \"https://arxiv.org/abs/2012.10800\">[1]</a> using different statistical divergences.",
+         : []
+    },
+    {
+         : ["research"],
+         : "AI POWER-Seeking Research",
+         : "AI Safety Camp, Alex Turner",
+         : "Jan 2022 - Present",
+         : "Worked to generalize the original POWER-Seeking Theorem <a href = \"https://arxiv.org/abs/1912.01683\">[1]</a> to partially observable environments.",
+         : []
+    },
+    {
+         : ["research"],
+         : "Causal Intention Research",
+         : "Meir Friedenberg, Joseph Halpern",
+         : "Oct 2022 - Present",
+         : "Examined the relationship between the Cohen & Levesque <a href = \"https://ai.stanford.edu/~epacuit/classes/lori-spr09/cohenlevesque-intention-aij90.pdf\">[1]</a> and Halpern & Kleiman-Weiner  <a href = \"https://arxiv.org/pdf/1810.05903.pdf\">[2]</a> definitions of Intention, in a unified formal model.",
+         : []
+    },
+    {
+         : ["research", "work"],
+         : "Information Extraction Research",
+         : "CSURP Program, Claire Cardie",
+         : "Jun 2021 - Aug 2021",
+         : "Analyzed frequency of different error types for document-level template filling models.",
+         : []
+    },
+    {
+         : ["research"],
+         : "Word Vector Geometry Research",
+         : "Marten van Schijndel",
+         : "Oct 2019 - Mar 2020",
+         : "Worked on analyzing the geometry of syntactic classes in word vector embeddings.",
+         : []
+    },
+    {
+         : ["work"],
+         : "Machine Learning Intern",
+         : "DTech, LLC",
+         : "Jun 2020 - Aug 2020, Jan 2021",
+         : "Researched and implemented machine learning algorithms for cybersecurity anomaly detection."
+    },
+    {
+         : ["teaching", "work"],
+         : "Teaching Assistant for CS 3110",
+         : "FA22"
+    },
+    {
+         : ["teaching", "work"],
+         : "Teaching Assistant for CS 3410",
+         : "FA21"
+    },
+    {
+         : ["teaching", "work"],
+         : "Teaching Assistant for CS 2800",
+         : "FA20, SP21"
+    }
+]
+
+In this paper I present the advantages of extending the traditional tree-like semantic representations of function application, commonly used in formal semantics, with the graphic lambda calculus presented by Buliga (2013). I claim that traditional extensions to syntax trees, such as lines indicating coreference and arrows indicating movement correspond to components of the graphic lambda calculus. 
+
+The pasture programming language's key innovation is treating functions and type constructors uniformly; both are symbols formally applied to other expressions, and reduction rules may simulate function definition. The language is also fundamentally typeless, with each expression being just a symbol or the formal application of one expression to another.
+
+Pasture is similar in spirit to lambda calculus, with function application as the central operation.
+
+Pasture is similar in spirit to Haskell or OCaml, employing currying and other functional programming covnentions, and treating complex data as structured with symbolic type constuctors.
+
+Pasture is similar in spirit to LISP, following the 'code as data' paradigm and treating syntactic sugar, functions on data, and higher order functions uniformly.
+
+Pasture is similar in spirit to symbolic programming, with all computation expressed as rewrite rules
+
+Pasutre also embraces a 'left to right, top to bottom' philosophy, employing something like Lawvere's notation for category theory by writing functions to the right of their arguments. This means that the computation can be read left to right when it is the composition of many functions of low arity, but at the cost of greater confusion when dealing with few functions of high arity.
+
+Pasture is wild. There is no type system, nor are variables, constants, functions, keywords, and data instrinsically distinct from each other. There are no runtime errors; any grammatical program will execute (unless it violates space or time bounds). This places a burden on both the author and reader of pasture code, and probably dooms pasture to suffer from many of the problems of LISP. Pasture is far too extreme to be practical. My hope is just that pasture is interesting.
+
+In short, pasture is a fusion of symbolic and functional programming. Computation is best written and thought of as function application, but secretly represents the application of rewrite rules on trees of formal function application.
+
+Document-level information extraction (IE)
+tasks have recently begun to be revisited in
+earnest using the end-to-end neural network
+techniques that have been successful on their
+sentence-level IE counterparts. Evaluation of
+the approaches, however, has been limited in
+a number of dimensions. In particular, the
+precision/recall/F1 scores typically reported
+provide few insights on the range of errors
+the models make. We build on the work of
+Kummerfeld and Klein (2013) to propose a
+transformation-based framework for automating error analysis in document-level event
+and (N-ary) relation extraction. We employ
+our framework to compare two state-of-theart document-level template-filling approaches
+on datasets from three domains; and then, to
+gauge progress in IE since its inception 30
+years ago, vs. four systems from the MUC-4
+(1992) evaluation.
+
+Beginning students of Latin practice their language skills by translating Latin sentences into English. As an alternative to the labor intensive process of manually creating sentences, while still accounting for the students' levels of skill, a constrained Latin sentence generator is developed. A dependency model is used, in which a sentence is modelled as a totally ordered rooted tree with words as vertices and dependency relationships as edges. The set of allowed words is the constrained vocabulary, and the set of allowed dependency relationships is the constrained grammar. The inflection of words is constrained by the grammar and the user, and is otherwise random. A fully customizable, grammatical Latin sentence generator is achieved, with the ability to expand vocabulary and grammar for classroom use.
+
+The purpose of this inquiry is to interpret formal definitions of ``intention" put forth in Cohen \& Levesque's \textit{Intention is Choice with Commitment} (1990) (CL from now on) in the setting of causal models. Specifically, we compare such definitions to those proposed by Halpern and Kleiman-Weiner (2018) (HK from now on). 
+
+Our approach is to construct a model in which both the agent/action-based dynamic logic of CL and the action-based causal modeling of HK can be suitably interpreted. We enrich the linear-temporal structures of CL with explicit exogenous and endogenous variables and time-indexed structural equations. 
+
+We wish to generalize the original power seeking theorem to partially observable cases. Here we present an instance of a POMDP with symmetry, in which POWER-seeking follows from Theorem A.13 of an unpublished draft by Alex Turner. The key is that the optimal agent in the belief MDP, defined below, is optimizing an EU-determined function, essentially a function of dot products between a reward function and linear combinations of the states of the POMDP. 
+
+Basic Proof Theory (Cambridge Tracks in Theoretical CS)
+Modal Logic for Open Minds, Johan van Benthem
+Tractatus Logico-Philosophicus, Ludwig Wittgenstein
+Thinking in Numbers, Daniel Tammet
+The Universal Computer: The Road from Leibniz to Turing, Martin Davis
+Winning Ways for your Mathematical Plays, by Berlekamp, Conway, & Guy
+21 Lessons for the 21st Century, Yuval Noah Harari
+The Innovators, Walter Isaacson
+The Hidden Reality, Brian Greene
+Our Mathematical Universe, Max Tegmark
+The Quark and the Jaguar: Adventures in the Simple and the Complex, Murray Gell-Mann
+The Future of the Mind, Michio Kaku
+Genius Makers, Cade Metz
+The Elegant Universe, Brian Greene
+Quantum Computing Since Democritus, Scott Aaronson
+Life 3.0, Max Tegmark
+The Road to Reality, Roger Penrose
+Superintelligence, Nick Bostrom
+The Pragmatic Programmer, Andy Hunt and Dave Thomas
+Axiomatic Method and Category Theory, Andrei Rodin
+Category Theory (Oxford Logic Guide), Steve Awodey
+Homo Deus, Yuval Noah Harari
+Gödel, Escher, Bach: an Eternal Golden Braid, Douglas Hofstadter
+Sapiens, Yuval Noah Harari
+The Book of Why: The New Science of Cause and Effect, Judea Pearl and Dana Mackenzie
+Surreal Numbers, Donald Knuth
+The Pun Also Rises, John Pollack
+Journey Through Genius, William Dunham
+A Geometry of Music, Dmitri Tymoczko
