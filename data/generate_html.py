@@ -49,46 +49,34 @@ def generate(maintemplate, maindest, blogtemplate, blogdest):
     result = f.read()
     f.close()
 
-    f = open("data/contact.json")
-    contact = json.load(f)
-    for key, value in contact.items():
+    f = open("data/content.json")
+    content = json.load(f)
+    f.close()
+
+    for key, value in content["contact"].items():
         result = result.replace("#"+key, value)
-    f.close()
 
-    f = open("data/blurb.txt", "r")
-    result = result.replace("#blurb", f.read())
-    f.close()
+    result = result.replace("#blurb", content["blurb"])
 
-    f = open("data/experience.json")
-    experiences = json.load(f)
+    experiences = content["experience"]
     result = result.replace("#experience", "".join([process_experience(experience) for experience in experiences]))
-    f.close()
     
     f = open("data/blog.html", "r")
     blog = f.read()
     result = result.replace("#blog", blog)
     f.close()
 
-    f = open("data/projects.json")
-    projects = json.load(f)
+    projects = content["projects"]
     result = result.replace("#projects", "".join([process_project(project) for project in projects]))
-    f.close()
 
-    f = open("data/skills.json")
-    skills = json.load(f)
-    for key, value in skills.items():
+    for key, value in content["skills"].items():
         result = result.replace("#"+ key, "".join(["<li>"+val+"</li>" for val in value]))
-    f.close()
 
-    f = open("data/classes.json")
-    classes = json.load(f)
-    class_dict = get_classes(classes)
+    class_dict = get_classes(content["classes"])
     for key, value in class_dict.items():
         result = result.replace("#"+ key + "classes", "".join(value))
-    f.close()
 
-    f = open("data/reading.json")
-    readings = json.load(f)
+    readings = content["reading"]
     result = result.replace("#reading", "".join([process_reading(reading) for reading in readings]))
     f.close()
 
