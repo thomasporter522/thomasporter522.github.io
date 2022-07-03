@@ -52,7 +52,7 @@
             "name" : "PDG Divergence Research",
             "with" : "Oliver Richardson, Joseph Halpern",
             "date" : "Jun 2022 - Present",
-            "description" : "Explored alternative defintions of Probabilistic Dependency Graph inconsistency <a href = \"https://arxiv.org/abs/2012.10800\">[1]</a> using different statistical divergences.",
+            "description" : "Explored alternative definitions of Probabilistic Dependency Graph inconsistency <a href = \"https://arxiv.org/abs/2012.10800\">[1]</a> using different statistical divergences.",
             "results" : []
         },
         {
