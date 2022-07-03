@@ -76,7 +76,7 @@
             "name" : "Information Extraction Research",
             "with" : "CSURP Program, Claire Cardie",
             "date" : "Jun 2021 - Aug 2021",
-            "description" : "Analyzed frequency of different error types for document-level template filling models.",
+            "description" : "Automated analysis of frequency of different error types for document-level template filling models.",
             "results" : []
         },
         {
