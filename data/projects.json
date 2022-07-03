@@ -4,28 +4,35 @@
         "name" : "Automatic Error Analysis for Document-level Information Extraction from Scientific Text",
         "at" : "ACL 2022",
         "year" : 2021,
-        "link": "https://aclanthology.org/2022.acl-long.274.pdf",
+        "link": {"paper" : "https://aclanthology.org/2022.acl-long.274.pdf"},
         "description" : "Result of <b>Information Extraction Research</b>."
     },
     {
         "tags" : [],
         "name" : "Pasture Programming Language",
         "year" : 2020,
-        "link": "https://github.com/thomasporter522/pasture",
+        "link": {"code" : "https://github.com/thomasporter522/pasture"},
         "description" : "Developed and implemented a novel programming language fusing symbolic and functional programming."
     },
     {
         "tags" : [],
         "name" : "Graphic Lambda Calculus and Natural Language Syntax",
         "year" : 2022,
-        "link": "pdfs/Graphical Lambda Calculus in Natural Language.pdf",
+        "link": {"paper" : "pdfs/Graphical Lambda Calculus in Natural Language.pdf"},
         "description" : "Final paper for Syntax I, linking the graphic lambda calculus <a href = \"https://arxiv.org/abs/1305.5786\">[1]</a> with syntax trees and movement structures in natural language sytnax."
     },
     {
         "tags" : [],
         "name" : "Arachne Latin Learning Tool",
         "year" : 2019,
-        "link": "https://github.com/thomasporter522/arachne",
+        "link": {"code" : "https://github.com/thomasporter522/arachne", "paper":"pdfs/Arachne.pdf"},
         "description" : "High school senior resarch project. Created a Latin sentence generator with user specified vocabulary and grammar constraints."
+    },
+    {
+        "tags" : [],
+        "name" : "ML-ExLab",
+        "year" : 2020,
+        "link": {"code" : "https://github.com/dtechspace/ml-exlab"},
+        "description" : "Developed as a <b>Machine Learning Intern at DTech</b>. Tool for automating and logging the tests of machine learning models and hyperparameter settings."
     }
 ]

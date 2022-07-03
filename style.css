@@ -14,6 +14,10 @@ ul {
     font-size: 90%;
     padding: 0px 0px;
 }
+.reading {
+    list-style: none;
+    padding: 0px 0px;
+}
 .grid-container {
     display: grid;
     background-color: black;
@@ -44,6 +48,13 @@ ul {
 .date {
     margin-top:0px;
     display: inline;
+    color: rgb(100, 100, 100); 
+}
+.author {
+    margin-top:0px;
+    display: inline;
+    text-align: center;
+    margin-left: 30px;
     color: rgb(100, 100, 100); 
 }
 .description {

@@ -1,7 +1,12 @@
 import json
 
 def process_project(project):
-    item = "<p class=\"project\">"+ project["name"] +" <a href = \"" + project["link"] + "\">[link]</a></p>"
+    item = "<p class=\"project\">"+ project["name"] 
+    if len(project["link"].items()) > 1:
+        item += "<br>"
+    for key, value in project["link"].items():
+        item += " <a href = \"" + value + "\">[" + key + "]</a>"
+    item += "</p>"
     if "at" in project.keys():
         item += "<span class=\"with\">"+project["at"]+"</span>"
     if "description" in project.keys():
@@ -36,7 +41,7 @@ def get_classes(classes):
 def process_reading(reading):
     item = "<b><em>" + reading["title"] + "</em></b>"
     if "author" in reading.keys():
-        item += ", " + reading["author"]
+        item += "<br><p class=\"author\">" + reading["author"] + "</p>"
     return "<li>" + item + "</li>"
 
 def generate(maintemplate, maindest, blogtemplate, blogdest):
@@ -67,6 +72,12 @@ def generate(maintemplate, maindest, blogtemplate, blogdest):
     f = open("data/projects.json")
     projects = json.load(f)
     result = result.replace("#projects", "".join([process_project(project) for project in projects]))
+    f.close()
+
+    f = open("data/skills.json")
+    skills = json.load(f)
+    for key, value in skills.items():
+        result = result.replace("#"+ key, "".join(["<li>"+val+"</li>" for val in value]))
     f.close()
 
     f = open("data/classes.json")

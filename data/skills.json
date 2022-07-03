@@ -1,0 +1,5 @@
+{
+    "skills": ["Machine Learning", "Software Development", "Mathematical Problem Solving", "Technical Communication", "Teaching"],
+    "languages": ["Python", "OCaml", "Scala", "Java", "C (beginner)"],
+    "technologies": ["TensorFlow/Keras", "Apache Spark", "Unix", "Git", "Latex"]
+}
