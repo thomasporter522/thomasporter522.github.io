@@ -1,334 +1,430 @@
 {
-    "blurb" : "I am a fourth year undergraduate interested in programming languages and proof systems, artificial intelligence, and their combined use in augmenting advanced STEM education. I am also interested in AI safety, linguistics, physics, and philosophy.",
-    "contact" : 
-    {
-        "name" : "Thomas Porter",
-        "summary" : "Math + CS @ Cornell",
-        "email" : "thomasporter2019@gmail.com",
-        "linkedin" : "https://www.linkedin.com/in/thomas-porter-23b011171/",
-        "github" : "https://github.com/thomasporter522"
+    "blurb": "I am a fourth year undergraduate interested in programming languages and proof systems, artificial intelligence, and their combined use in augmenting advanced STEM education. I am also interested in AI safety, linguistics, physics, and philosophy.",
+    "contact": {
+        "name": "Thomas Porter",
+        "summary": "Math + CS @ Cornell",
+        "email": "thomasporter2019@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/thomas-porter-23b011171/",
+        "github": "https://github.com/thomasporter522"
     },
-    "projects" : [
+    "projects": [
         {
-            "tags" : ["publication", "paper"],
-            "name" : "Automatic Error Analysis for Document-level Information Extraction from Scientific Text",
-            "at" : "ACL 2022",
-            "year" : 2021,
-            "link": {"paper" : "https://aclanthology.org/2022.acl-long.274.pdf"},
-            "description" : "Result of <b>Information Extraction Research</b>."
+            "tags": [
+                "publication",
+                "paper"
+            ],
+            "name": "Automatic Error Analysis for Document-level Information Extraction from Scientific Text",
+            "at": "ACL 2022",
+            "year": 2021,
+            "link": {
+                "paper": "https://aclanthology.org/2022.acl-long.274.pdf"
+            },
+            "description": "Result of <b>Information Extraction Research</b>."
         },
         {
-            "tags" : [],
-            "name" : "Pasture Programming Language",
-            "year" : 2020,
-            "link": {"code" : "https://github.com/thomasporter522/pasture"},
-            "description" : "Developed and implemented a novel programming language fusing symbolic and functional programming."
+            "tags": [],
+            "name": "Pasture Programming Language",
+            "year": 2020,
+            "link": {
+                "code": "https://github.com/thomasporter522/pasture"
+            },
+            "description": "Developed and implemented a novel programming language fusing symbolic and functional programming."
         },
         {
-            "tags" : [],
-            "name" : "Graphic Lambda Calculus and Natural Language Syntax",
-            "year" : 2022,
-            "link": {"paper" : "pdfs/Graphical Lambda Calculus in Natural Language.pdf"},
-            "description" : "Final paper for Syntax I, linking the graphic lambda calculus <a href = \"https://arxiv.org/abs/1305.5786\">[1]</a> with syntax trees and movement structures in natural language sytnax."
+            "tags": [],
+            "name": "Graphic Lambda Calculus and Natural Language Syntax",
+            "year": 2022,
+            "link": {
+                "paper": "pdfs/Graphical Lambda Calculus in Natural Language.pdf"
+            },
+            "description": "Final paper for Syntax I, linking the graphic lambda calculus <a href = \"https://arxiv.org/abs/1305.5786\">[1]</a> with syntax trees and movement structures in natural language sytnax."
         },
         {
-            "tags" : [],
-            "name" : "Arachne Latin Learning Tool",
-            "year" : 2019,
-            "link": {"code" : "https://github.com/thomasporter522/arachne", "paper":"pdfs/Arachne.pdf"},
-            "description" : "High school senior resarch project. Created a Latin sentence generator with user specified vocabulary and grammar constraints."
+            "tags": [],
+            "name": "Arachne Latin Learning Tool",
+            "year": 2019,
+            "link": {
+                "code": "https://github.com/thomasporter522/arachne",
+                "paper": "pdfs/Arachne.pdf"
+            },
+            "description": "High school senior resarch project. Created a Latin sentence generator with user specified vocabulary and grammar constraints."
         },
         {
-            "tags" : [],
-            "name" : "ML-ExLab",
-            "year" : 2020,
-            "link": {"code" : "https://github.com/dtechspace/ml-exlab"},
-            "description" : "Developed as a <b>Machine Learning Intern at DTech</b>. Tool for automating and logging the tests of machine learning models and hyperparameter settings."
+            "tags": [],
+            "name": "ML-ExLab",
+            "year": 2020,
+            "link": {
+                "code": "https://github.com/dtechspace/ml-exlab"
+            },
+            "description": "Developed as a <b>Machine Learning Intern at DTech</b>. Tool for automating and logging the tests of machine learning models and hyperparameter settings."
         }
     ],
     "experience": [
         {
-            "tags" : ["research", "work"],
-            "name" : "PDG Divergence Research",
-            "with" : "Oliver Richardson, Joseph Halpern",
-            "date" : "Jun 2022 - Present",
-            "description" : "Explored alternative definitions of Probabilistic Dependency Graph inconsistency <a href = \"https://arxiv.org/abs/2012.10800\">[1]</a> using different statistical divergences.",
-            "results" : []
+            "tags": [
+                "research",
+                "work"
+            ],
+            "name": "PDG Divergence Research",
+            "with": "Oliver Richardson, Joseph Halpern",
+            "date": "Jun 2022 - Present",
+            "description": "Explored alternative definitions of Probabilistic Dependency Graph inconsistency <a href = \"https://arxiv.org/abs/2012.10800\">[1]</a> using different statistical divergences.",
+            "results": []
         },
         {
-            "tags" : ["research"],
-            "name" : "AI POWER-Seeking Research",
-            "with" : "AI Safety Camp, Alex Turner",
-            "date" : "Jan 2022 - Present",
-            "description" : "Worked to generalize the original POWER-Seeking Theorem <a href = \"https://arxiv.org/abs/1912.01683\">[1]</a> to partially observable environments.",
-            "results" : []
+            "tags": [
+                "research"
+            ],
+            "name": "AI POWER-Seeking Research",
+            "with": "AI Safety Camp, Alex Turner",
+            "date": "Jan 2022 - Present",
+            "description": "Worked to generalize the original POWER-Seeking Theorem <a href = \"https://arxiv.org/abs/1912.01683\">[1]</a> to partially observable environments.",
+            "results": []
         },
         {
-            "tags" : ["research"],
-            "name" : "Causal Intention Research",
-            "with" : "Meir Friedenberg, Joseph Halpern",
-            "date" : "Oct 2022 - Present",
-            "description" : "Examined the relationship between the Cohen & Levesque <a href = \"https://ai.stanford.edu/~epacuit/classes/lori-spr09/cohenlevesque-intention-aij90.pdf\">[1]</a> and Halpern & Kleiman-Weiner  <a href = \"https://arxiv.org/pdf/1810.05903.pdf\">[2]</a> definitions of Intention, in a unified formal model.",
-            "results" : []
+            "tags": [
+                "research"
+            ],
+            "name": "Causal Intention Research",
+            "with": "Meir Friedenberg, Joseph Halpern",
+            "date": "Oct 2022 - Present",
+            "description": "Examined the relationship between the Cohen & Levesque <a href = \"https://ai.stanford.edu/~epacuit/classes/lori-spr09/cohenlevesque-intention-aij90.pdf\">[1]</a> and Halpern & Kleiman-Weiner  <a href = \"https://arxiv.org/pdf/1810.05903.pdf\">[2]</a> definitions of Intention, in a unified formal model.",
+            "results": []
         },
         {
-            "tags" : ["research", "work"],
-            "name" : "Information Extraction Research",
-            "with" : "CSURP Program, Claire Cardie",
-            "date" : "Jun 2021 - Aug 2021",
-            "description" : "Automated analysis of frequency of different error types for document-level template filling models.",
-            "results" : []
+            "tags": [
+                "research",
+                "work"
+            ],
+            "name": "Information Extraction Research",
+            "with": "CSURP Program, Claire Cardie",
+            "date": "Jun 2021 - Aug 2021",
+            "description": "Automated analysis of frequency of different error types for document-level template filling models.",
+            "results": []
         },
         {
-            "tags" : ["research"],
-            "name" : "Word Vector Geometry Research",
-            "with" : "Marten van Schijndel",
-            "date" : "Oct 2019 - Mar 2020",
-            "description" : "Worked on analyzing the geometry of syntactic classes in word vector embeddings.",
-            "results" : []
+            "tags": [
+                "research"
+            ],
+            "name": "Word Vector Geometry Research",
+            "with": "Marten van Schijndel",
+            "date": "Oct 2019 - Mar 2020",
+            "description": "Worked on analyzing the geometry of syntactic classes in word vector embeddings.",
+            "results": []
         },
         {
-            "tags" : ["work"],
-            "name" : "Machine Learning Intern",
-            "with" : "DTech, LLC",
-            "date" : "Jun 2020 - Aug 2020, Jan 2021",
-            "description" : "Researched and implemented machine learning algorithms for cybersecurity anomaly detection."
+            "tags": [
+                "work"
+            ],
+            "name": "Machine Learning Intern",
+            "with": "DTech, LLC",
+            "date": "Jun 2020 - Aug 2020, Jan 2021",
+            "description": "Researched and implemented machine learning algorithms for cybersecurity anomaly detection."
         },
         {
-            "tags" : ["teaching", "work"],
-            "name" : "Teaching Assistant for CS 3110",
-            "date" : "FA22"
+            "tags": [
+                "teaching",
+                "work"
+            ],
+            "name": "Teaching Assistant for CS 3110",
+            "date": "FA22"
         },
         {
-            "tags" : ["teaching", "work"],
-            "name" : "Teaching Assistant for CS 3410",
-            "date" : "FA21"
+            "tags": [
+                "teaching",
+                "work"
+            ],
+            "name": "Teaching Assistant for CS 3410",
+            "date": "FA21"
         },
         {
-            "tags" : ["teaching", "work"],
-            "name" : "Teaching Assistant for CS 2800",
-            "date" : "FA20, SP21"
+            "tags": [
+                "teaching",
+                "work"
+            ],
+            "name": "Teaching Assistant for CS 2800",
+            "date": "FA20, SP21"
         }
     ],
-    "skills":
-    {
-        "skills": ["Machine Learning", "Software Development", "Mathematical Problem Solving", "Technical Communication", "Teaching"],
-        "languages": ["Python", "OCaml", "Scala", "Java", "C (beginner)"],
-        "technologies": ["TensorFlow/Keras", "Apache Spark", "Unix", "Git", "Latex"]
+    "skills": {
+        "skills": [
+            "Machine Learning",
+            "Software Development",
+            "Mathematical Problem Solving",
+            "Technical Communication",
+            "Teaching"
+        ],
+        "languages": [
+            "Python",
+            "OCaml",
+            "Scala",
+            "Java",
+            "C (beginner)"
+        ],
+        "technologies": [
+            "TensorFlow/Keras",
+            "Apache Spark",
+            "Unix",
+            "Git",
+            "Latex"
+        ]
     },
-    "classes":[
+    "classes": [
         {
-            "subject" : "cs",
-            "number" : 6802,
-            "name" : "Lattices",
-            "description" : "A mathematically rigorous course on lattices. Lattices are periodic sets of vectors in high-dimensional space. They play a central role in modern cryptography, and they arise naturally in the study of high-dimensional geometry (e.g., sphere packings). We will study lattices as both geometric and computational objects. Topics include Minkowski's celebrated theorem, the famous LLL algorithm for finding relatively short lattice vectors, Fourier-analytic methods, basic cryptographic constructions, and modern algorithms for finding shortest lattice vectors. We may also see connections to algebraic number theory.",
+            "subject": "cs",
+            "number": 6802,
+            "name": "Lattices",
+            "description": "A mathematically rigorous course on lattices. Lattices are periodic sets of vectors in high-dimensional space. They play a central role in modern cryptography, and they arise naturally in the study of high-dimensional geometry (e.g., sphere packings). We will study lattices as both geometric and computational objects. Topics include Minkowski's celebrated theorem, the famous LLL algorithm for finding relatively short lattice vectors, Fourier-analytic methods, basic cryptographic constructions, and modern algorithms for finding shortest lattice vectors. We may also see connections to algebraic number theory.",
             "skills": []
         },
         {
-            "subject" : "cs",
-            "number" : 6764,
-            "name" : "Reasoning about Knowledge",
-            "description" : "Knowledge plays a crucial role in distributed systems, game theory, and artificial intelligence. Material examines formalizing reasoning about knowledge and the extent to which knowledge is applicable to those areas. Issues include common knowledge, knowledge-based programs, applying knowledge to analyzing distributed systems, attainable states of knowledge, modeling resource-bounded reasoning, and connections to game theory.",
+            "subject": "cs",
+            "number": 6764,
+            "name": "Reasoning about Knowledge",
+            "description": "Knowledge plays a crucial role in distributed systems, game theory, and artificial intelligence. Material examines formalizing reasoning about knowledge and the extent to which knowledge is applicable to those areas. Issues include common knowledge, knowledge-based programs, applying knowledge to analyzing distributed systems, attainable states of knowledge, modeling resource-bounded reasoning, and connections to game theory.",
             "skills": []
         },
         {
-            "subject" : "cs",
-            "number" : 4850,
-            "name" : "Mathematical Foundations for the Information Age",
-            "description" : "Covers the mathematical foundations for access to information. Topics include high dimensional space, random graphs, singular value decomposition, Markov processes, learning theory, and algorithms for massive data.",
+            "subject": "cs",
+            "number": 4850,
+            "name": "Mathematical Foundations for the Information Age",
+            "description": "Covers the mathematical foundations for access to information. Topics include high dimensional space, random graphs, singular value decomposition, Markov processes, learning theory, and algorithms for massive data.",
             "skills": []
         },
         {
-            "subject" : "cs",
-            "number" : 4820,
-            "name" : "Analysis of Algorithms",
-            "description" : "Develops techniques used in the design and analysis of algorithms, with an emphasis on problems arising in computing applications. Example applications are drawn from systems and networks, artificial intelligence, computer vision, data mining, and computational biology. This course covers four major algorithm design techniques (greedy algorithms, divide-and-conquer, dynamic programming, and network flow), undecidability and NP-completeness, and algorithmic techniques for intractable problems (including identification of structured special cases , approximation algorithms, local search heuristics, and online algorithms).",
+            "subject": "cs",
+            "number": 4820,
+            "name": "Analysis of Algorithms",
+            "description": "Develops techniques used in the design and analysis of algorithms, with an emphasis on problems arising in computing applications. Example applications are drawn from systems and networks, artificial intelligence, computer vision, data mining, and computational biology. This course covers four major algorithm design techniques (greedy algorithms, divide-and-conquer, dynamic programming, and network flow), undecidability and NP-completeness, and algorithmic techniques for intractable problems (including identification of structured special cases , approximation algorithms, local search heuristics, and online algorithms).",
             "skills": []
         },
         {
-            "subject" : "cs",
-            "number" : 4812,
-            "name" : "Quantum Information Processing",
-            "description" : "Hardware that exploits quantum phenomena can dramatically alter the nature of computation. Though constructing a general purpose quantum computer remains a formidable technological challenge, there has been much recent experimental progress. In addition, the theory of quantum computation is of interest in itself, offering new perspectives on the nature of computation and information, as well as providing novel insights into the conceptual puzzles posed by quantum theory. This course is intended for physicists, unfamiliar with computational complexity theory or cryptography, and for computer scientists and mathematicians with prior exposure to quantum mechanics. Topics include: simple quantum algorithms, error correction, cryptography, teleportation, and uses of quantum computing devices either currently available or to be available in the near future.",
-            "skills": ["Qiskit"]
+            "subject": "cs",
+            "number": 4812,
+            "name": "Quantum Information Processing",
+            "description": "Hardware that exploits quantum phenomena can dramatically alter the nature of computation. Though constructing a general purpose quantum computer remains a formidable technological challenge, there has been much recent experimental progress. In addition, the theory of quantum computation is of interest in itself, offering new perspectives on the nature of computation and information, as well as providing novel insights into the conceptual puzzles posed by quantum theory. This course is intended for physicists, unfamiliar with computational complexity theory or cryptography, and for computer scientists and mathematicians with prior exposure to quantum mechanics. Topics include: simple quantum algorithms, error correction, cryptography, teleportation, and uses of quantum computing devices either currently available or to be available in the near future.",
+            "skills": [
+                "Qiskit"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 4780,
-            "name" : "Machine Learning",
-            "description" : "The course provides an introduction to machine learning, focusing on supervised learning and its theoretical foundations. Topics include regularized linear models, boosting, kernels, deep networks, generative models, online learning, and ethical questions arising in ML applications.",
-            "skills": ["TensorFlow"]
+            "subject": "cs",
+            "number": 4780,
+            "name": "Machine Learning",
+            "description": "The course provides an introduction to machine learning, focusing on supervised learning and its theoretical foundations. Topics include regularized linear models, boosting, kernels, deep networks, generative models, online learning, and ethical questions arising in ML applications.",
+            "skills": [
+                "TensorFlow"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 4700,
-            "name" : "Artificial Intelligence",
-            "description" : "Challenging introduction to the major subareas and current research directions in artificial intelligence. Topics include: knowledge representation, heuristic search, problem solving, natural-language processing, game-playing, logic and deduction, planning, and machine learning.",
-            "skills": ["Python"]
+            "subject": "cs",
+            "number": 4700,
+            "name": "Artificial Intelligence",
+            "description": "Challenging introduction to the major subareas and current research directions in artificial intelligence. Topics include: knowledge representation, heuristic search, problem solving, natural-language processing, game-playing, logic and deduction, planning, and machine learning.",
+            "skills": [
+                "Python"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 4160,
-            "name" : "Formal Verification",
-            "description" : "An introduction to formal verification, focusing on correctness of functional and imperative programs relative to mathematical specifications. Topics include computer-assisted theorem proving, logic, programming language semantics, and verification of algorithms and data structures. Assignments involve extensive use of a proof assistant to develop and check proofs.",
-            "skills": ["Coq"]
+            "subject": "cs",
+            "number": 4410,
+            "name": "Operating Systems",
+            "description": "Introduction to the design of systems programs, with emphasis on multiprogrammed operating systems. Topics include concurrency, synchronization, deadlocks, memory management, protection, input-output methods, networking, file systems and security. The impact of network and distributed computing environments on operating systems is also discussed.",
+            "skills": [
+                "Harmony"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 4120,
-            "name" : "Compilers",
-            "description" : "An introduction to the specification and implementation of modern compilers. Topics covered include lexical scanning, parsing, type checking, code generation and translation, an introduction to program analysis and optimization, and compile-time and run-time support for modern programming languages. As part of the course, students will build a working compiler for an object-oriented language.",
-            "skills": ["OCaml", "Unix"]
+            "subject": "cs",
+            "number": 4160,
+            "name": "Formal Verification",
+            "description": "An introduction to formal verification, focusing on correctness of functional and imperative programs relative to mathematical specifications. Topics include computer-assisted theorem proving, logic, programming language semantics, and verification of algorithms and data structures. Assignments involve extensive use of a proof assistant to develop and check proofs.",
+            "skills": [
+                "Coq"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 4110,
-            "name" : "Programming Languages & Logics",
-            "description" : "An introduction to the theory, design, and implementation of programming languages. Topics include operational semantics, type systems, higher-order functions, scope, lambda calculus, laziness, exceptions, side effects, continuations, objects, and modules. Also discussed are logic programming, concurrency, and distributed programming.",
+            "subject": "cs",
+            "number": 4120,
+            "name": "Compilers",
+            "description": "An introduction to the specification and implementation of modern compilers. Topics covered include lexical scanning, parsing, type checking, code generation and translation, an introduction to program analysis and optimization, and compile-time and run-time support for modern programming languages. As part of the course, students will build a working compiler for an object-oriented language.",
+            "skills": [
+                "OCaml",
+                "Unix"
+            ]
+        },
+        {
+            "subject": "cs",
+            "number": 4110,
+            "name": "Programming Languages & Logics",
+            "description": "An introduction to the theory, design, and implementation of programming languages. Topics include operational semantics, type systems, higher-order functions, scope, lambda calculus, laziness, exceptions, side effects, continuations, objects, and modules. Also discussed are logic programming, concurrency, and distributed programming.",
             "skills": []
         },
         {
-            "subject" : "cs",
-            "number" : 3410,
-            "name" : "Computer System Organization & Programming",
-            "description" : "Introduction to computer organization, systems programming and the hardware/ software interface. Topics include instruction sets, computer arithmetic, datapath design, data formats, addressing modes, memory hierarchies including caches and virtual memory, I/O devices, bus-based I/O systems, and multicore architectures. Students learn assembly language programming and design a pipelined RISC processor.",
-            "skills": ["RISCV", "C", "Unix"]
+            "subject": "cs",
+            "number": 3410,
+            "name": "Computer System Organization & Programming",
+            "description": "Introduction to computer organization, systems programming and the hardware/ software interface. Topics include instruction sets, computer arithmetic, datapath design, data formats, addressing modes, memory hierarchies including caches and virtual memory, I/O devices, bus-based I/O systems, and multicore architectures. Students learn assembly language programming and design a pipelined RISC processor.",
+            "skills": [
+                "RISCV",
+                "C",
+                "Unix"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 3110,
-            "name" : "Functional Programming",
-            "description" : "Advanced programming course that emphasizes functional programming techniques and data structures. Programming topics include recursive and higher-order procedures, models of programming language evaluation and compilation, type systems, and polymorphism. Data structures and algorithms covered include graph algorithms, balanced trees, memory heaps, and garbage collection. Also covers techniques for analyzing program performance and correctness.",
-            "skills": ["OCaml", "Unix"]
+            "subject": "cs",
+            "number": 3110,
+            "name": "Functional Programming",
+            "description": "Advanced programming course that emphasizes functional programming techniques and data structures. Programming topics include recursive and higher-order procedures, models of programming language evaluation and compilation, type systems, and polymorphism. Data structures and algorithms covered include graph algorithms, balanced trees, memory heaps, and garbage collection. Also covers techniques for analyzing program performance and correctness.",
+            "skills": [
+                "OCaml",
+                "Unix"
+            ]
         },
         {
-            "subject" : "cs",
-            "number" : 2800,
-            "name" : "Discrete Structures",
-            "description" : "Covers the mathematics that underlies most of computer science. Topics include mathematical induction; logical proof; propositional and predicate calculus; combinatorics and discrete mathematics; some basic elements of basic probability theory; basic number theory; sets, functions, and relations; graphs; and finite-state machines. These topics are discussed in the context of applications to many areas of computer science, such as the RSA cryptosystem and web searching.",
+            "subject": "cs",
+            "number": 2850,
+            "name": "Networks",
+            "description": "This interdisciplinary course examines network structures and how they matter in everyday life. The course examines how each of the computing, economic, sociological and natural worlds are connected and how the structure of these connections affects each of these worlds. Tools of graph theory and game theory are taught and then used to analyze networks. Topics covered include the web, the small world phenomenon, markets, neural networks, contagion, search and the evolution of networks.",
             "skills": []
         },
         {
-            "subject" : "cs",
-            "number" : 2110,
-            "name" : "Object Oriented Programming & Data Structures",
-            "description" : "Intermediate programming in a high-level language and introduction to computer science. Topics include object-oriented programming (classes, objects, subclasses, types), graphical user interfaces, algorithm analysis (asymptotic complexity, big \"O\" notation), recursion, testing, program correctness (loop invariants), searching/sorting, data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms. Java is the principal programming language.",
-            "skills": ["Java"]
-        },
-        {
-            "subject" : "math",
-            "number" : 6810,
-            "name" : "Logic",
-            "description" : "Covers basic topics in mathematical logic, including propositional and predicate calculus; formal number theory and recursive functions; completeness and incompleteness theorems, compactness and Skolem-Loewenheim theorems. Other topics as time permits.",
+            "subject": "cs",
+            "number": 2800,
+            "name": "Discrete Structures",
+            "description": "Covers the mathematics that underlies most of computer science. Topics include mathematical induction; logical proof; propositional and predicate calculus; combinatorics and discrete mathematics; some basic elements of basic probability theory; basic number theory; sets, functions, and relations; graphs; and finite-state machines. These topics are discussed in the context of applications to many areas of computer science, such as the RSA cryptosystem and web searching.",
             "skills": []
         },
         {
-            "subject" : "math",
-            "number" : 4340,
-            "name" : "Honors Introduction to Algebra",
-            "description" : "Honors version of a course in abstract algebra, which treats the subject from an abstract and axiomatic viewpoint, including universal mapping properties. Topics include groups, groups acting on sets, Sylow theorems; rings, factorization: Euclidean rings, principal ideal domains and unique factorization domains, the structure of finitely generated modules over a principal ideal domain, fields, and Galois theory. The course emphasizes understanding the theory with proofs in both homework and exams.",
+            "subject": "cs",
+            "number": 2110,
+            "name": "Object Oriented Programming & Data Structures",
+            "description": "Intermediate programming in a high-level language and introduction to computer science. Topics include object-oriented programming (classes, objects, subclasses, types), graphical user interfaces, algorithm analysis (asymptotic complexity, big \"O\" notation), recursion, testing, program correctness (loop invariants), searching/sorting, data structures (lists, trees, stacks, queues, heaps, search trees, hash tables, graphs), graph algorithms. Java is the principal programming language.",
+            "skills": [
+                "Java"
+            ]
+        },
+        {
+            "subject": "math",
+            "number": 6810,
+            "name": "Logic",
+            "description": "Covers basic topics in mathematical logic, including propositional and predicate calculus; formal number theory and recursive functions; completeness and incompleteness theorems, compactness and Skolem-Loewenheim theorems. Other topics as time permits.",
             "skills": []
         },
         {
-            "subject" : "math",
-            "number" : 4200,
-            "name" : "Differential Equations & Dynamical Systems",
-            "description" : "Covers ordinary differential equations in one and higher dimensions: qualitative, analytic, and numerical methods. Emphasis is on differential equations as models and the implications of the theory for the behavior of the system being modeled and includes an introduction to bifurcations.",
+            "subject": "math",
+            "number": 4340,
+            "name": "Honors Introduction to Algebra",
+            "description": "Honors version of a course in abstract algebra, which treats the subject from an abstract and axiomatic viewpoint, including universal mapping properties. Topics include groups, groups acting on sets, Sylow theorems; rings, factorization: Euclidean rings, principal ideal domains and unique factorization domains, the structure of finitely generated modules over a principal ideal domain, fields, and Galois theory. The course emphasizes understanding the theory with proofs in both homework and exams.",
             "skills": []
         },
         {
-            "subject" : "math",
-            "number" : 4180,
-            "name" : "Complex Analysis",
-            "description" : "Theoretical and rigorous introduction to complex variable theory. Topics include complex numbers, differential and integral calculus for functions of a complex variable including Cauchy's theorem and the calculus of residues, elements of conformal mapping.",
+            "subject": "math",
+            "number": 4330,
+            "name": "Honors Linear Algebra",
+            "description": "Honors version of a course in advanced linear algebra, which treats the subject from an abstract and axiomatic viewpoint. Topics include vector spaces, linear transformations, polynomials, determinants, tensor and wedge products, canonical forms, inner product spaces, and bilinear forms. Emphasis is on understanding the theory of linear algebra; homework and exams include at least as many proofs as computational problems.",
             "skills": []
         },
         {
-            "subject" : "math",
-            "number" : 3840,
-            "name" : "Introduction to Set Theory",
-            "description" : "This will be a course on standard set theory (first developed by Ernst Zermelo early in the 20th century): the basic concepts of sethood and membership, operations on sets, functions as sets, the set-theoretic construction of the Natural Numbers, the Integers, the Rational and Real numbers; time permitting, some discussion of cardinality.",
+            "subject": "math",
+            "number": 4200,
+            "name": "Differential Equations & Dynamical Systems",
+            "description": "Covers ordinary differential equations in one and higher dimensions: qualitative, analytic, and numerical methods. Emphasis is on differential equations as models and the implications of the theory for the behavior of the system being modeled and includes an introduction to bifurcations.",
             "skills": []
         },
         {
-            "subject" : "math",
-            "number" : 2240,
-            "name" : "Theoretical Linear Algebra & Calculus",
-            "description" : "Topics include vector fields; line integrals; differential forms and exterior derivative; work, flux, and density forms; integration of forms over parametrized domains; and Green's, Stokes', and divergence theorems.",
+            "subject": "math",
+            "number": 4180,
+            "name": "Complex Analysis",
+            "description": "Theoretical and rigorous introduction to complex variable theory. Topics include complex numbers, differential and integral calculus for functions of a complex variable including Cauchy's theorem and the calculus of residues, elements of conformal mapping.",
             "skills": []
         },
         {
-            "subject" : "math",
-            "number" : 2230,
-            "name" : "Theoretical Linear Algebra & Calculus",
-            "description" : "Topics include vectors, matrices, and linear transformations; differential calculus of functions of several variables; inverse and implicit function theorems; quadratic forms, extrema, and manifolds; multiple and iterated integrals.",
+            "subject": "math",
+            "number": 3840,
+            "name": "Introduction to Set Theory",
+            "description": "This will be a course on standard set theory (first developed by Ernst Zermelo early in the 20th century): the basic concepts of sethood and membership, operations on sets, functions as sets, the set-theoretic construction of the Natural Numbers, the Integers, the Rational and Real numbers; time permitting, some discussion of cardinality.",
             "skills": []
         },
         {
-            "subject" : "linguistics",
-            "number" : 4425,
-            "name" : "Pragmatics",
-            "description" : "What is the relationship between what words mean and how they are used? What is part of the grammar and what is a result of general reasoning? Pragmatics is often thought of as the study of how meaning depends on the context of utterance. However, it can be difficult to draw a line between pragmatics and semantics. In this course, we will investigate various topics that walk this line, including varieties of linguistic inference (including entailment, presupposition, and implicature), anaphora, indexicals, and speech acts.",
+            "subject": "math",
+            "number": 2240,
+            "name": "Theoretical Linear Algebra & Calculus",
+            "description": "Topics include vector fields; line integrals; differential forms and exterior derivative; work, flux, and density forms; integration of forms over parametrized domains; and Green's, Stokes', and divergence theorems.",
             "skills": []
         },
         {
-            "subject" : "linguistics",
-            "number" : 4403,
-            "name" : "Syntax I",
-            "description" : "An advanced introduction to syntactic theory within the principles and parameters/minimalist frameworks. Topics include phrase structure, argument structure (unaccusative verbs, unergative verbs, double object constructions), principles of word order, and the binding theory.",
+            "subject": "math",
+            "number": 2230,
+            "name": "Theoretical Linear Algebra & Calculus",
+            "description": "Topics include vectors, matrices, and linear transformations; differential calculus of functions of several variables; inverse and implicit function theorems; quadratic forms, extrema, and manifolds; multiple and iterated integrals.",
             "skills": []
         },
         {
-            "subject" : "linguistics",
-            "number" : 3303,
-            "name" : "Introduction to Syntax & Semantics",
-            "description" : "This course explores both syntax (how words and phrases are combined into sentences) and semantics (how the meanings of words, phrases, and sentences are interpreted). The course aims to give students to the ability to address questions regarding syntactic and semantic properties of languages in a rigorous and informed fashion. Topics covered include phrase structure, grammatical relations, transformations, semantic composition, modification, quantification, and the syntax/semantics interface. Emphasis throughout the course is placed on forming and testing hypotheses.",
+            "subject": "linguistics",
+            "number": 4425,
+            "name": "Pragmatics",
+            "description": "What is the relationship between what words mean and how they are used? What is part of the grammar and what is a result of general reasoning? Pragmatics is often thought of as the study of how meaning depends on the context of utterance. However, it can be difficult to draw a line between pragmatics and semantics. In this course, we will investigate various topics that walk this line, including varieties of linguistic inference (including entailment, presupposition, and implicature), anaphora, indexicals, and speech acts.",
+            "skills": []
+        },
+        {
+            "subject": "linguistics",
+            "number": 4403,
+            "name": "Syntax I",
+            "description": "An advanced introduction to syntactic theory within the principles and parameters/minimalist frameworks. Topics include phrase structure, argument structure (unaccusative verbs, unergative verbs, double object constructions), principles of word order, and the binding theory.",
+            "skills": []
+        },
+        {
+            "subject": "linguistics",
+            "number": 3303,
+            "name": "Introduction to Syntax & Semantics",
+            "description": "This course explores both syntax (how words and phrases are combined into sentences) and semantics (how the meanings of words, phrases, and sentences are interpreted). The course aims to give students to the ability to address questions regarding syntactic and semantic properties of languages in a rigorous and informed fashion. Topics covered include phrase structure, grammatical relations, transformations, semantic composition, modification, quantification, and the syntax/semantics interface. Emphasis throughout the course is placed on forming and testing hypotheses.",
             "skills": []
         }
     ],
-    "reading":[
+    "reading": [
         {
             "title": "Basic Proof Theory (Cambridge Tracks in Theoretical CS)"
         },
         {
-            "title":"Modal Logic for Open Minds",
-            "author":"Johan van Benthem"
+            "title": "Modal Logic for Open Minds",
+            "author": "Johan van Benthem"
         },
         {
-            "title":"Tractatus Logico-Philosophicus",
-            "author":"Ludwig Wittgenstein"
+            "title": "Tractatus Logico-Philosophicus",
+            "author": "Ludwig Wittgenstein"
         },
         {
-            "title":"Thinking in Numbers",
-            "author":"Daniel Tammet"
+            "title": "Thinking in Numbers",
+            "author": "Daniel Tammet"
         },
         {
-            "title":"The Universal Computer: The Road from Leibniz to Turing",
-            "author":"Martin Davis"
+            "title": "The Universal Computer: The Road from Leibniz to Turing",
+            "author": "Martin Davis"
         },
         {
-            "title":"Winning Ways for your Mathematical Plays",
-            "author":"Berlekamp, Conway, & Guy"
+            "title": "Winning Ways for your Mathematical Plays",
+            "author": "Berlekamp, Conway, & Guy"
         },
         {
-            "title":"21 Lessons for the 21st Century",
-            "author":"Yuval Noah Harari"
+            "title": "21 Lessons for the 21st Century",
+            "author": "Yuval Noah Harari"
         },
         {
-            "title":"The Innovators",
-            "author":"Walter Isaacson"
+            "title": "The Innovators",
+            "author": "Walter Isaacson"
         },
         {
-            "title":"The Hidden Reality",
-            "author":"Brian Greene"
+            "title": "The Hidden Reality",
+            "author": "Brian Greene"
         },
         {
-            "title":"Our Mathematical Universe",
-            "author":"Max Tegmark"
+            "title": "Our Mathematical Universe",
+            "author": "Max Tegmark"
         },
         {
-            "title":"The Quark and the Jaguar: Adventures in the Simple and the Complex",
-            "author":"Murray Gell-Mann"
+            "title": "The Quark and the Jaguar: Adventures in the Simple and the Complex",
+            "author": "Murray Gell-Mann"
         }
-    ]   
+    ]
 }
