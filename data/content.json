@@ -1,5 +1,5 @@
 {
-    "blurb": "I am a fourth year undergraduate interested in programming languages and proof systems, artificial intelligence, and their combined use in augmenting advanced STEM education. I am also interested in AI safety, linguistics, physics, and philosophy.",
+    "blurb": "I am a fresh graduate of Cornell interested in programming languages and proof systems, artificial intelligence, and their combined use in augmenting advanced STEM education. I am also interested in AI safety, linguistics, physics, and philosophy.",
     "contact": {
         "name": "Thomas Porter",
         "summary": "Math + CS @ Cornell",
@@ -67,7 +67,7 @@
             ],
             "name": "PDG Divergence Research",
             "with": "Oliver Richardson, Joseph Halpern",
-            "date": "Jun 2022 - Present",
+            "date": "Jun 2022 - Sept 2022",
             "description": "Explored alternative definitions of Probabilistic Dependency Graph inconsistency <a href = \"https://arxiv.org/abs/2012.10800\">[1]</a> using different statistical divergences.",
             "results": []
         },
@@ -77,7 +77,7 @@
             ],
             "name": "AI POWER-Seeking Research",
             "with": "AI Safety Camp, Alex Turner",
-            "date": "Jan 2022 - Present",
+            "date": "Jan 2022 - May 2022",
             "description": "Worked to generalize the original POWER-Seeking Theorem <a href = \"https://arxiv.org/abs/1912.01683\">[1]</a> to partially observable environments.",
             "results": []
         },
@@ -87,7 +87,7 @@
             ],
             "name": "Causal Intention Research",
             "with": "Meir Friedenberg, Joseph Halpern",
-            "date": "Oct 2022 - Present",
+            "date": "Nov 2021 - Oct 2022",
             "description": "Examined the relationship between the Cohen & Levesque <a href = \"https://ai.stanford.edu/~epacuit/classes/lori-spr09/cohenlevesque-intention-aij90.pdf\">[1]</a> and Halpern & Kleiman-Weiner  <a href = \"https://arxiv.org/pdf/1810.05903.pdf\">[2]</a> definitions of Intention, in a unified formal model.",
             "results": []
         },

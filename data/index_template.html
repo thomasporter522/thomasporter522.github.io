@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <link rel="stylesheet" href="./style.css">
     <link rel="icon" href="./images/icon.jpg">
 </head>
+
 <body>
     <div class="grid-container">
         <div class="grid-item" id="pfp">
@@ -13,14 +15,14 @@
             <h1>#name</h1>
             <h3>#summary</h3>
             <p>#blurb</p>
-            <a href = "mailto:#email"> <img src="./images/gmail.png" width="30" height="30"></a>
-            <a href = "#linkedin"> <img src="./images/linkedin.png" width="30" height="30"></a>
-            <a href = "#github"> <img src="./images/github.png" width="30" height="30"></a>
+            <a href="mailto:#email"> <img src="./images/gmail.png" width="30" height="30"></a>
+            <a href="#linkedin"> <img src="./images/linkedin.png" width="30" height="30"></a>
+            <a href="#github"> <img src="./images/github.png" width="30" height="30"></a>
             <p>Click on items below to view their descriptions!</p>
         </div>
         <div class="grid-item" id="wordcloud">
             <img src="./images/word-art.png" width="300" style="border: 5px solid rgba(0, 0, 0, 1)">
-        </div>  
+        </div>
         <div class="grid-item" id="projects">
             <h1>Projects & Papers</h1> #projects
         </div>
@@ -28,9 +30,9 @@
             <h1>Experience</h1> #experience
         </div>
         <div class="grid-item" id="blog">
-            <h1><a href = "https://thomasporter522.github.io/blog/">Blog</a></h1>
+            <h1><a href="https://thomasporter522.github.io/blog/">Blog</a></h1>
             <ul> #blog </ul>
-        </div>  
+        </div>
         <div class="grid-item" id="skills">
             <h1>Skills</h1>
             <ul> #skills </ul>
@@ -44,13 +46,15 @@
                     <ul> #technologies </ul>
                 </div>
             </div>
-        </div>  
+        </div>
         <div class="grid-item" id="education">
             <h1>Education</h1>
-            <h3>Cornell University</h3> 
-            Ithaca, NY 14850. (2019 - present) Majors: Computer Science and Mathematics. Minor: Linguistics. GPA: 4.045/4.3
-            <h3>Computer Science</h3> <ul class="classes"> #csclasses </ul>
-            <h3>Mathematics</h3> <ul class="classes"> #mathclasses </ul>
+            <h3>Cornell University</h3>
+            Ithaca, NY 14850. (2019 - 2022) Majors: Computer Science and Mathematics. Minor: Linguistics. GPA: 4.045/4.3
+            <h3>Computer Science</h3>
+            <ul class="classes"> #csclasses </ul>
+            <h3>Mathematics</h3>
+            <ul class="classes"> #mathclasses </ul>
             <h3>Linguistcs</h3>
             <ul class="classes">
                 #linguisticsclasses
@@ -59,28 +63,29 @@
             </ul>
             <h3>Thomas Jefferson High School for Science and Technology</h3>
             Alexandria, VA. (2015 - 2019) GPA: 4.45/4
-        </div>  
+        </div>
         <div class="grid-item" id="reading-list">
             <h1>Recent Reading</h1>
             <ul class="reading"> #reading </ul>
-        </div>  
+        </div>
     </div>
 
     <script>
         var coll = document.getElementsByClassName("collapsible");
         var i;
-        
+
         for (i = 0; i < coll.length; i++) {
-          coll[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var content = this.nextElementSibling;
-            if (content.style.display === "block") {
-              content.style.display = "none";
-            } else {
-              content.style.display = "block";
-            }
-          });
+            coll[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var content = this.nextElementSibling;
+                if (content.style.display === "block") {
+                    content.style.display = "none";
+                } else {
+                    content.style.display = "block";
+                }
+            });
         }
     </script>
 </body>
+
 </html>
