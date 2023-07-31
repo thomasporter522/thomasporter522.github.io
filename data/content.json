@@ -62,6 +62,16 @@
     "experience": [
         {
             "tags": [
+                "research"
+            ],
+            "name": "Hazel Project",
+            "with": "Adam Chen, Cyrus Omar",
+            "date": "May 2023 - Present",
+            "description": "Worked on implementation and verification of explicit polymorphism in <a href = \"https://arxiv.org/abs/2012.10800\">Hazel</a>.",
+            "results": []
+        },
+        {
+            "tags": [
                 "research",
                 "work"
             ],
