@@ -3,69 +3,91 @@ body {
     background-color: rgba(50, 10, 60, 1);
     margin-left: auto;
     margin-right: auto;
-    font-family: 'Arial';
+    font-family: 'Bitter', serif;
     width: 70em;
 }
+
 ul {
     text-align: left;
 }
+
 .classes {
     list-style: none;
     font-size: 90%;
     padding: 0px 0px;
 }
+
 .reading {
     list-style: none;
     padding: 0px 0px;
 }
+
 .grid-container {
     display: grid;
     background-color: black;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     padding: 10px;
 }
+
 .grid-item {
     /* border: 1px solid rgba(0, 0, 0, 1); */
     background-color: rgb(200, 200, 200);
     padding: 20px 20px;
     text-align: center;
 }
-.collapsible { 
+
+.collapsible {
     cursor: pointer;
 }
+
 .experience {
     font-weight: bold;
-    margin-bottom:0px;
+    margin-bottom: 0px;
     font-size: 110%;
     /* text-align: left; */
 }
+
 .project {
     font-weight: bold;
-    margin-bottom:0px;
+    margin-bottom: 0px;
     font-size: 110%;
     /* text-align: left; */
 }
+
 .date {
-    margin-top:0px;
+    margin-top: 0px;
     display: inline;
-    color: rgb(100, 100, 100); 
+    color: rgb(100, 100, 100);
 }
+
 .author {
-    margin-top:0px;
+    margin-top: 0px;
     display: inline;
     text-align: center;
     margin-left: 30px;
-    color: rgb(100, 100, 100); 
+    color: rgb(100, 100, 100);
 }
+
 .description {
-    color: rgb(100, 100, 100); 
+    color: rgb(100, 100, 100);
     text-align: left;
 }
+
 .expdescription {
     text-align: left;
 }
-.skill{
+
+.skill {
     color: black;
     font-weight: bold;
     font-size: 90%;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
