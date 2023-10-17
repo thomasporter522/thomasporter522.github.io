@@ -6,6 +6,19 @@
     background-color: rgb(230, 230, 230);
     padding: 10px;
 }
+
 .blogpage {
     background-color: rgb(125, 112, 152);
+}
+
+table,
+th,
+td {
+    border: 1px solid rgba(55, 53, 47, 0.09);
+    border-collapse: collapse;
+    margin-top: 1em;
+    font-size: 0.875rem;
+    empty-cells: show;
+    height: 29px;
+    min-width: 120px;
 }
