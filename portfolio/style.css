@@ -1,0 +1,39 @@
+/* @font-face {
+    font-family: "Bitter";
+    src: url("bitter_font/static/Bitter-Medium.ttf");
+}  */
+
+body {
+  /* background-color: rgba(100, 100, 100, 1); */
+  background-color: rgba(50, 10, 60, 1);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Bitter', serif;
+  width: 30em;
+}
+
+ul {
+  text-align: left;
+}
+
+.grid-container {
+  display: grid;
+  background-color: black;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  padding: 10px;
+}
+
+.grid-item {
+  /* border: 1px solid rgba(0, 0, 0, 1); */
+  background-color: rgb(200, 200, 200);
+  padding: 20px 20px;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* a:hover {
+  text-decoration: underline;
+} */
