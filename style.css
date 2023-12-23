@@ -9,7 +9,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     font-family: 'Bitter', serif;
-    width: 30em;
+    width: 50em;
+}
+
+div {
+    /* border: 1px solid rgba(0, 0, 0, 1); */
+    background-color: rgb(200, 200, 200);
+    padding: 20px 20px;
+    text-align: center;
 }
 
 ul {
@@ -27,19 +34,41 @@ ul {
     padding: 0px 0px;
 }
 
-.grid-container {
+.outer-grid {
     display: grid;
     background-color: black;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
+    /* grid-template-columns: repeat(2, minmax(0, 1fr)); */
     padding: 10px;
 }
 
-.grid-item {
-    /* border: 1px solid rgba(0, 0, 0, 1); */
-    background-color: rgb(200, 200, 200);
+.outer-item {
+    border: 1px solid rgba(0, 0, 0, 1);
+    padding: 0px;
+}
+
+.header-grid {
+    display: grid;
+    /* background-color: black; */
+    grid-template-columns: 220px auto;
+    padding: 0px;
+}
+
+.tab-grid {
+    display: grid;
+    grid-auto-columns: minmax(0, 1fr);
+    grid-auto-flow: column;
+    padding: 0px;
+}
+
+.tab {
     padding: 20px 20px;
     text-align: center;
 }
+
+/* .p {
+    line-height: 0px;
+    padding: 0px;
+} */
 
 .collapsible {
     cursor: pointer;
