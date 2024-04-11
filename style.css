@@ -3,6 +3,18 @@
     src: url("bitter_font/static/Bitter-Medium.ttf");
 }  */
 
+button {
+    width: 6em
+}
+
+/* span:hover span {
+    display: none
+} */
+
+span:hover:after {
+    content: " (The University of Michigan)"
+}
+
 body {
     /* background-color: rgba(100, 100, 100, 1); */
     background-color: rgba(50, 10, 60, 1);
