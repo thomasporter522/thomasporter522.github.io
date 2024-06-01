@@ -139,6 +139,14 @@
       if (event.key === 'Tab' | event.keyCode === 32 | event.key === 'ArrowLeft' | event.key === 'ArrowRight' | event.key === 'ArrowUp' | event.key === 'ArrowDown' | (event.ctrlKey && event.shiftKey && event.key === 'A') | (event.ctrlKey && (event.key === 'a' || event.key === 's' || event.key === 'e' || event.key === 'r' || event.key === 'f' || event.key === 'l'))) {
         event.preventDefault();
       }
+      if (event.repeat != undefined) {
+        document.getElementsByClassName("cursor-hole-div")[0]?.scrollIntoViewIfNeeded()
+        document.getElementsByClassName("cursor-div")[0]?.scrollIntoViewIfNeeded()
+      }
+    });
+    document.addEventListener('keyup', function (event) {
+      document.getElementsByClassName("cursor-hole-div")[0]?.scrollIntoViewIfNeeded()
+      document.getElementsByClassName("cursor-div")[0]?.scrollIntoViewIfNeeded()
     });
   </script>
 </head>
