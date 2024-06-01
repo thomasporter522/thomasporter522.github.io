@@ -58,6 +58,10 @@
       height: 25px;
     }
 
+    .highlight {
+      border-bottom: 2px solid lightgrey;
+    }
+
     .hole-div {
       width: 19px;
       height: 19px;
@@ -89,6 +93,7 @@
     }
 
     .oneline {
+      white-space: nowrap;
       display: inline-grid;
       grid-auto-flow: column;
       grid-template-rows: max-content;
@@ -131,7 +136,7 @@
   </style>
   <script>
     document.addEventListener('keydown', function (event) {
-      if (event.key === 'Tab' | event.keyCode === 32 | event.key === 'ArrowLeft' | event.key === 'ArrowRight' | event.key === 'ArrowUp' | event.key === 'ArrowDown' | (event.ctrlKey && event.shiftKey && event.key === 'A') | (event.ctrlKey && (event.key === 'a' || event.key === 's' || event.key === 'r' || event.key === 'f' || event.key === 'l'))) {
+      if (event.key === 'Tab' | event.keyCode === 32 | event.key === 'ArrowLeft' | event.key === 'ArrowRight' | event.key === 'ArrowUp' | event.key === 'ArrowDown' | (event.ctrlKey && event.shiftKey && event.key === 'A') | (event.ctrlKey && (event.key === 'a' || event.key === 's' || event.key === 'e' || event.key === 'r' || event.key === 'f' || event.key === 'l'))) {
         event.preventDefault();
       }
     });
