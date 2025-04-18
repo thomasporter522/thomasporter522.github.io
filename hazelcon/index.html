@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="../style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      /* background-color: rgba(100, 100, 100, 1); */
+      background-color: rgb(101, 151, 173);
+      margin-left: auto;
+      margin-right: auto;
+      font-family: 'Bitter', serif;
+      width: 70em;
+    }
+
+    .calendar {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      /* Two equal columns */
+      gap: 5px;
+      /* Space between the columns */
+    }
+
+    .calendar-item {
+      padding: 5px;
+      background-color: rgb(101, 151, 173);
+      color: white;
+      text-align: center;
+    }
+
+    .calendar-entry {
+      display: grid;
+      grid-template-columns: 1fr 5fr;
+      /* Two equal columns */
+      gap: 2px;
+    }
+
+    .calendar-entry-item {
+      padding: 5px;
+      background-color: rgb(184, 183, 183);
+      text-align: center;
+      border-color: black;
+      border-width: 2px;
+      font-size: 10pt;
+    }
+  </style>
+
+</head>
+
+<body>
+  <h1>NUTELLA 2025</h1>
+  <p>May 5 - 9, 2025</p>
+
+  <p>Welcome to the website of the 1st Non-University Trip for Exploring Live Language Applications (NUTELLA 2025).
+    NUTELLA 2025 will take place in Port Sanilac, Michigan.</p>
+
+  <p>The annual Non-University Trip for Exploring Live Language Applications is a forum for the discussion of all
+    aspects of the Hazel programming language and environment. Both polished presentations and prospective discussions
+    are welcome on topics ranging from parsing to live GUIs. We seek submissions that make principled, enduring
+    contributions to the theory, design, understanding, implementation, or application of Hazel.</p>
+
+  <p>See the <a href="./cfp.html"><u>Call For Events</u></a> for detailed information.</p>
+
+  <h2>Schedule</h2>
+
+  <div class="calendar">
+    <div class="calendar-item">Mon</div>
+    <div class="calendar-item">Tues</div>
+    <div class="calendar-item">Wed</div>
+    <div class="calendar-item">Thur</div>
+    <div class="calendar-item">Fri</div>
+    <div class="calendar-entry">
+      <!-- Monday -->
+      <div class="calendar-entry-item">7pm</div>
+      <div class="calendar-entry-item">Opening Ceremony</div>
+    </div>
+    <div class="calendar-entry">
+      <!-- Tuesday -->
+      <div class="calendar-entry-item">10am</div>
+      <div class="calendar-entry-item">Presentation slot 1</div>
+      <div class="calendar-entry-item">12pm</div>
+      <div class="calendar-entry-item">Presentation slot 2</div>
+      <div class="calendar-entry-item">3pm</div>
+      <div class="calendar-entry-item">Presentation slot 3</div>
+      <div class="calendar-entry-item">5pm</div>
+      <div class="calendar-entry-item">Presentation slot 4</div>
+    </div>
+    <div class="calendar-entry">
+      <!-- Wednesday -->
+    </div>
+    <div class="calendar-entry">
+      <!-- Thursday -->
+    </div>
+    <div class="calendar-entry">
+      <!-- Friday -->
+    </div>
+  </div>
+
+</body>
