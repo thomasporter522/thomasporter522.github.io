@@ -1,0 +1,51 @@
+body {
+  /* background-color: rgba(100, 100, 100, 1); */
+  background-color: rgb(252, 236, 204);
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Bitter', serif;
+  width: 60em;
+}
+
+.pair {
+  background-color: rgb(252, 236, 204);
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+.pair-item {
+  text-align: left;
+  background-color: rgb(252, 236, 204);
+}
+
+.calendar {
+  background-color: rgb(252, 236, 204);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  gap: 2px;
+  padding: 2px;
+}
+
+.calendar-item {
+  padding: 0px;
+  background-color: rgb(220, 37, 31);
+  color: white;
+  text-align: center;
+}
+
+.calendar-entry {
+  background-color: rgb(252, 236, 204);
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  gap: 2px;
+  padding: 0px;
+}
+
+.calendar-entry-item {
+  padding: 5px;
+  background-color: rgb(242, 223, 184);
+  text-align: center;
+  border-color: black;
+  border-width: 2px;
+  font-size: 10pt;
+}
