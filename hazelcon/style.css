@@ -21,7 +21,7 @@ body {
 .calendar {
   background-color: rgb(252, 236, 204);
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 2px;
   padding: 2px;
 }
