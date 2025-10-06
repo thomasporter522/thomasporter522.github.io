@@ -144,6 +144,10 @@ a {
     border-bottom: 1px dotted black;
 }
 
+.tooltip.no-underline {
+    border-bottom: none;
+}
+
 .tooltip .tooltiptext {
     visibility: hidden;
     /* width: 120px; */
