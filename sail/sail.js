@@ -351,17 +351,13 @@ class ShipGame {
         this.sailAngle = Math.max(-Math.PI / 2, Math.min(Math.PI / 2, this.sailAngle));        
         this.rudderAngle = Math.max(-Math.PI / 8, Math.min(Math.PI / 8, this.rudderAngle));
         
-        // Rudder reverts to cetner
+        // Rudder reverts to center
         this.rudderAngle -= Math.sign(this.rudderAngle) * this.speed * 0.001
         
         // Sail reverts to wind direction
         let tweakAngle = this.sailAngle + this.heading - (windHeading + Math.PI);
-        console.log("heading: "+this.heading);
-        // console.log(tweakAngle);
         tweakAngle = ((tweakAngle + (3 * Math.PI)) % (2 * Math.PI)) - Math.PI;
-        console.log("-> " + tweakAngle);
         const tweakNegative = tweakAngle < 0;
-        // console.log(tweakAngle);
         if (releasing || (tweakNegative !== (this.sailAngle > 0))) {
             if (tweakNegative) {
                 this.sailAngle += Math.min(0.05, -tweakAngle); 
@@ -370,9 +366,13 @@ class ShipGame {
             }
         }
 
-        const sailPerpendicular = this.heading + this.sailAngle + Math.PI / 2;
-        const windForceEfficiency = Math.abs(efficiency(windHeading, sailPerpendicular));
+        // Efficiency coefficient of wind force to mast
+        const sailPerpendicular = this.heading + this.sailAngle - Math.sign(this.sailAngle) * Math.PI / 2;
+        const windForceEfficiency = Math.max(0, efficiency(windHeading, sailPerpendicular));
+
+        // Efficiency coefficient of mast force to keel direction
         const forwardEfficiency = efficiency(this.heading, sailPerpendicular);
+        
         const netEfficiency = windForceEfficiency * Math.abs(forwardEfficiency);
         const windwardShipSpeed = this.speed * Math.abs(efficiency(windHeading, this.heading));
         const relativeWindSpeed = windSpeed - windwardShipSpeed;
